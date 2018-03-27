@@ -1,0 +1,56 @@
+/*右侧导航样式开始*/
+#rightNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    background-color: black;
+}
+#rightNav ul:first-child {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 50%;
+}
+#rightNav ul:last-child {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+}
+#rightNav ul li {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#rightNav ul li .navigationInto {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 90px;
+    height: 35px;
+    opacity: 0;
+    display: none;
+    line-height: 35px;
+    background-color: #494949;
+}
+#rightNav ul li .navigationIntoArr {
+    position: absolute;
+    top: 8px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
+    font-size: 30px;
+    line-height: 16px;
+    text-align: center;
+    color: #494949;
+}
+#rightNav ul li:hover {
+    background-color: red;
+}
+#rightNav ul li .iconfont {
+    font-size: 22px;
+}
