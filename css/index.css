@@ -25,6 +25,7 @@
     color: white;
     margin-bottom: 10px;
     text-align: center;
+    line-height: 35px;
 }
 #rightNav ul li .navigationInto {
     position: absolute;
@@ -32,7 +33,7 @@
     right: 70px;
     width: 90px;
     height: 35px;
-    opacity: 0;
+    opacity: 1;
     display: none;
     line-height: 35px;
     background-color: #494949;
@@ -51,6 +52,252 @@
 #rightNav ul li:hover {
     background-color: red;
 }
+#rightNav ul li:hover .navigationInto {
+    display: block;
+    animation: move .6s;
+    animation-fill-mode: forwards;
+}
 #rightNav ul li .iconfont {
     font-size: 22px;
+}
+@keyframes move {
+    from {opacity: 0;transform: translateX(0px)}
+    to {opacity: 1;transform: translateX(35px)}
+}
+@keyframes leave {
+    from {opacity: 1;transform: translateX(35px)}
+    to {opacity: 0;transform: translateX(0px)}
+}
+/*右侧导航样式结束*/
+
+/*头部导航栏开始*/
+#site-nav {
+    position: relative;
+    width: 100%;
+    height: 34px;
+    background-color: #f2f2f2;
+    border:1px solid #e5e5e5;
+    color: #999;
+}
+.sn-bd {
+    position: relative;
+    width: 70%;
+    height: 32px;
+    margin: auto;
+    line-height: 32px;
+}
+.sn-bd p {
+    float: left;
+}
+.logo-info a{
+    padding: 0 10px;
+}
+.logo-info a:hover {
+    color: red;
+}
+.sn-bd ul {
+    float: right;
+}
+.sn-bd ul li {
+    position: relative;
+    float: left;
+}
+
+.sn-menu .spacer {
+    overflow: hidden;
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+.sn-menu li a {
+    display: block;
+    position: relative;
+    padding: 0 7px;
+}
+.sn-menu a:hover {
+    color: red;
+    cursor: pointer;
+}
+.sn-menu i {
+    display: block;
+    height: 32px;
+    position: relative;
+    padding: 0 7px;
+    z-index: 1;
+}
+
+.sn-bd i:hover b{
+    transition: transform .4s;
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+}
+.sn-menu b {
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid dashed dashed;
+    border-color: #bbb transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+.dropdown:hover{
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+}
+.dropdown:hover .dropdown-layer {
+    display: block;
+}
+.dropdown .ddserv{
+    right: 0px;
+    width: 170px;
+    padding: 10px 0;
+}
+.dropdown .ddnav{
+    right: -84px;
+    width: 988px;
+    padding: 15px 0;
+}
+.dropdown .dropdown-layer {
+    position: absolute;
+    line-height: 24px;
+    border:1px solid#ccc;
+    display: none;
+    z-index: 1;
+    background-color: #fff;
+}
+.dropdown-layer .item-client {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+}
+.dropdown-layer .item-business {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dotted #eee;
+}
+.dropdown-layer .item {
+    display: inline-block;
+    width: 80px;
+    color: #999;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.dropdown dl {
+    float: left;
+    padding-left: 20px;
+}
+.dropdown dl+dl {
+    border-left:1px dashed #eee;
+}
+.dropdown dl dt {
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-left:7px;
+    color: #666;
+}
+.dropdown dl dd {
+    float: left;
+    width: 80px;
+}
+.dropdown .fore1 {
+    width: 40%;
+}
+.dropdown .fore2 {
+    width: 20%;
+}
+.dropdown .fore3 {
+    width: 20%;
+}
+.dropdown .fore4 {
+    width: 20%;
+}
+/*头部导航栏结束*/
+
+/*头部开始*/
+#header {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    border:1px solid #e5e5e5;
+    color: #999;
+}
+.head-bd {
+    position: relative;
+    width: 70%;
+    height: 130px;
+    margin: auto;
+}
+.head-bd .head-logo {
+    float: left;
+    height: 100%;
+    width: 20%;
+}
+.head-bd .head-logo img {
+    height: 100%;
+}
+.head-bd .head-search {
+    float: left;
+    height: 100%;
+    width: 80%;
+}
+.head-search .head-input {
+    position: relative;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid red;
+    margin:40px 0 0 7%;
+}
+.head-input .heder-text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    padding-left: 10px;
+    height: 36px;
+    line-height: 36px;
+}
+.head-input .header-buttom {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 132px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+    background-color: red;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+.head-input .hot-query {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    height: 36px;
+    width: 100%;
+    overflow: hidden;
+}
+.head-input .hot-query li {
+    display: inline-block;
+    line-height: 1.1;
+    padding: 0px 12px;
+}
+.head-input .hot-query li+li {
+    border-left: 1px solid rgb(204, 204, 204);
+}
+.head-input .hot-query li a:hover {
+    cursor: pointer;
+    color: red;
 }
