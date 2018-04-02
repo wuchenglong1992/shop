@@ -1,7 +1,9 @@
 body {
-    min-width: 1100px;
+    min-width: 990px;
 }
-
+a:hover {
+    cursor: pointer;
+}
 /*右侧导航样式开始*/
 #rightNav {
     position: absolute;
@@ -85,10 +87,15 @@ body {
 }
 .sn-bd {
     position: relative;
-    width: 70%;
+    width: 1230px;
     height: 32px;
     margin: auto;
     line-height: 32px;
+}
+@media (max-width: 1260px){
+    .sn-bd{
+        width:982px;
+    }
 }
 .sn-bd p {
     float: left;
@@ -121,7 +128,6 @@ body {
 }
 .sn-menu a:hover {
     color: red;
-    cursor: pointer;
 }
 .sn-menu i {
     display: block;
@@ -236,14 +242,19 @@ body {
 }
 .head-bd {
     position: relative;
-    width: 70%;
+    width: 1230px;
     height: 130px;
     margin: auto;
+}
+@media (max-width: 1260px){
+    .head-bd{
+        width:982px;
+    }
 }
 .head-bd .head-logo {
     float: left;
     height: 100%;
-    width: 20%;
+    width: 200px;
 
 }
 .head-bd .head-logo img {
@@ -253,7 +264,7 @@ body {
 .head-bd .head-search {
     float: left;
     height: 100%;
-    width: 80%;
+    width: 70%;
 }
 .head-search .head-input {
     position: relative;
@@ -277,7 +288,7 @@ body {
     right: 0px;
     top: 0px;
     width: 132px;
-    height: 36px;
+    height: 40px;
     line-height: 36px;
     font-weight: 700;
     text-align: center;
@@ -303,7 +314,6 @@ body {
     border-left: 1px solid rgb(204, 204, 204);
 }
 .head-input .hot-query li a:hover {
-    cursor: pointer;
     color: red;
 }
 /*头部结束*/
@@ -324,8 +334,13 @@ body {
         border-bottom:1.5px solid#FF0036;
     }
     #content .inner-con0 {
-        width: 70%;
-        margin:auto;
+        width: 1230px;
+        margin:0 auto;
+    }
+    @media (max-width: 1260px){
+        #content .inner-con0 {
+            width: 982px;
+        }
     }
     #content .inner-con1 {
         margin-left: 200px;
@@ -335,7 +350,6 @@ body {
     #content .inner-con1 a {
         height: 35px;
         line-height: 35px;
-        cursor: pointer;
         float: left;
         padding: 0 8px;
         font-weight: 500;
@@ -345,6 +359,11 @@ body {
     }
     #content .inner-con1 a:hover {
         color: red;
+    }
+    #content .inner-con1 a img {
+        width: 100px;
+        height: 30px;
+        margin-top: 3px;
     }
     /*主题内容导航结束*/
 
@@ -356,8 +375,13 @@ body {
     .category-con .category-con0 {
         position: relative;
         height: 500px;
-        width: 70%;
-        margin: auto;
+        width: 1230px;
+        margin:0 auto;
+    }
+    @media (max-width: 1260px) {
+        .category-con .category-con0 {
+            width: 982px;
+        }
     }
     .category-con .category-con0 .category-type {
         position: absolute;
@@ -385,3 +409,177 @@ body {
         font-weight: 700;
 
     }
+    .category-con0 .category-tab-content {  /*tab-nav */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .category-tab-content .normal-nav {
+        position: relative;
+        background-color: rgba(0,0,0,.55);
+        width: 200px;
+        height: 500px;
+    }
+    .normal-nav .nav-item {
+        position: relative;
+        height: 31.2px;
+        line-height: 31.2px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .normal-nav .nav-item .selected {
+        background-color: #fff;
+    }
+    /*选项卡,选项内容选中不同颜色*/
+    .nav-item-0 a:hover, .nav-item-0.selected,
+    .nav-item-3 a:hover, .nav-item-3.selected,
+    .pannel-0 .highlight, .pannel-0 a:hover,
+    .pannel-3 .highlight, .pannel-3 a:hover{
+        color: #e54077!important;
+    }
+    .nav-item-1 a:hover, .nav-item-1.selected, .nav-item-1.selected a, .nav-item-1.selected i,
+    .nav-item-11 a:hover, .nav-item-11.selected, .nav-item-11.selected a, .nav-item-11.selected i,
+    .nav-item-5 a:hover, .nav-item-5.selected, .nav-item-5.selected a, .nav-item-5.selected i,
+    .nav-item-9 a:hover, .nav-item-9.selected, .nav-item-9.selected a, .nav-item-9.selected i,
+    .pannel-1 a.highlight, .pannel-1 a:hover, .pannel-1.selected, .pannel-1.selected a, .pannel-1.selected i,
+    .pannel-11 a.highlight, .pannel-11 a:hover, .pannel-11.selected, .pannel-11.selected a, .pannel-11.selected i,
+    .pannel-5 a.highlight, .pannel-5 a:hover, .pannel-5.selected, .pannel-5.selected a, .pannel-5.selected i,
+    .pannel-9 a.highlight, .pannel-9 a:hover, .pannel-9.selected, .pannel-9.selected a, .pannel-9.selected i{
+        color: #427def!important;
+    }
+    .nav-item-2 a.highlight, .nav-item-2 a:hover, .nav-item-2.selected, .nav-item-2.selected a, .nav-item-2.selected i, .nav-item-4 a.highlight, .nav-item-4 a:hover, .nav-item-4.selected, .nav-item-4.selected a, .nav-item-4.selected i, .pannel-2 a.highlight, .pannel-2 a:hover, .pannel-2.selected, .pannel-2.selected a, .pannel-2.selected i, .pannel-4 a.highlight, .pannel-4 a:hover, .pannel-4.selected, .pannel-4.selected a, .pannel-4.selected i{
+        color: #6347ed!important;
+    }
+    .nav-item-6 a.highlight, .nav-item-6 a:hover, .nav-item-6.selected, .nav-item-6.selected a, .nav-item-6.selected i, .pannel-6 a.highlight, .pannel-6 a:hover, .pannel-6.selected, .pannel-6.selected a, .pannel-6.selected i{
+        color: #fa5c5c!important;
+    }
+    .nav-item-12 a.highlight, .nav-item-12 a:hover, .nav-item-12.selected, .nav-item-12.selected a, .nav-item-12.selected i, .nav-item-7 a.highlight, .nav-item-7 a:hover, .nav-item-7.selected, .nav-item-7.selected a, .nav-item-7.selected i, .nav-item-8 a.highlight, .nav-item-8 a:hover, .nav-item-8.selected, .nav-item-8.selected a, .nav-item-8.selected i, .pannel-12 a.highlight, .pannel-12 a:hover, .pannel-12.selected, .pannel-12.selected a, .pannel-12.selected i, .pannel-7 a.highlight, .pannel-7 a:hover, .pannel-7.selected, .pannel-7.selected a, .pannel-7.selected i, .pannel-8 a.highlight, .pannel-8 a:hover, .pannel-8.selected, .pannel-8.selected a, .pannel-8.selected i{
+        color: #f7a831!important;
+    }
+    .nav-item-10 a.highlight, .nav-item-10 a:hover, .nav-item-10.selected, .nav-item-10.selected a, .nav-item-10.selected i, .nav-item-14 a.highlight, .nav-item-14 a:hover, .nav-item-14.selected, .nav-item-14.selected a, .nav-item-14.selected i, .pannel-10 a.highlight, .pannel-10 a:hover, .pannel-10.selected, .pannel-10.selected a, .pannel-10.selected i, .pannel-14 a.highlight, .pannel-14 a:hover, .pannel-14.selected, .pannel-14.selected a, .pannel-14.selected i{
+        color: #dd2727!important;
+    }
+    .nav-item-13 a.highlight, .nav-item-13 a:hover, .nav-item-13.selected, .nav-item-13.selected a, .nav-item-13.selected i, .nav-item-15 a.highlight, .nav-item-15 a:hover, .nav-item-15.selected, .nav-item-15.selected a, .nav-item-15.selected i, .pannel-13 a.highlight, .pannel-13 a:hover, .pannel-13.selected, .pannel-13.selected a, .pannel-13.selected i, .pannel-15 a.highlight, .pannel-15 a:hover, .pannel-15.selected, .pannel-15.selected a, .pannel-15.selected i{
+        color: #3bc7b0!important;
+    }
+    .normal-nav .selected {
+        background-color: #fff;
+    }
+    .normal-nav .nav-item .iconfont {
+        margin:0 4px 0 14px;
+        height: 31px;
+        line-height: 31px;
+        font-size: 16px;
+    }
+   
+    .category-con0 .content-con {  /* tab-con*/
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 500px;
+        display: block;
+    }
+    .content-con .pannel-con {
+        position: absolute;
+        left: 200px;
+        top: 0px;
+        height: 500px;
+        width: 852px;
+        background-color: #fff;
+    }
+    .pannel-con .hot-word-con { /*tab内容栏*/
+        float: left;
+        width: 583px;
+        height: 462px;
+        margin:19px 30px;
+        overflow: hidden;background-color: #fff;
+    }
+    .hot-word-con .hot-word-line .line-title{
+        float: left;
+        width: 60px;
+        height: 22px;
+        line-height: 22px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 700;
+        margin-right: 30px;
+        position: relative;
+    }
+    .hot-word-con .hot-word-line .line-title .iconfont {
+        position: absolute;
+        top: 0px;
+        right: -18px;
+    }
+    .hot-word-line .line-title .title-text {
+        width: 60px;
+        overflow: hidden;
+        text-align:justify;
+        text-align-last: justify;
+    }
+    .hot-word-line .line-con {
+        float: left;
+        width: 493px;
+    }
+    .hot-word-line .line-con a {
+        float: left;
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+        color: #666;
+        margin-left: 13px;
+    }
+    .hot-word-line .line-con .seprate {
+        margin-bottom: 10.5px;
+        border-bottom-width:1px;
+        border-style: dashed;
+        border-bottom-color:rgba(0,0,0,.1);
+        height: 10.5px;
+        clear: both;
+    }
+    @media (max-width: 1260px) {
+       .hot-word-line .line-con {
+        float: left;
+        width: 418px;
+    } 
+    }
+    .pannel-con .sub-logo-con {  /*tab右侧广告栏*/
+        float: left;
+        width: 189px;
+        height: 480px;
+        padding: 10px;
+        background-color: #FAFAFA;
+    }
+    .sub-logo-con .half-logo {
+        overflow: hidden;
+    }
+    .sub-logo-con .half-logo .logo {
+        float: left;
+        width: 73px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+        height: 37px;
+        padding: 5px 10px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .sub-logo-con .half-logo .logo img {
+        display: block;
+        width: 73px;
+        margin: 0 auto;
+    }
+    .sub-logo-con .one-logo a {
+        display: block;
+        margin-top: 10px;
+    }
+    .sub-logo-con .one-logo a img {
+        width: 189px;
+        height: 87px;
+    }
+   @media (max-width: 1260px) {
+    .content-con .pannel-con {
+        width: 782px;
+    }
+     .pannel-con .hot-word-con {
+        width: 511px;
+     }
+   }
