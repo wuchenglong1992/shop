@@ -427,44 +427,61 @@ a:hover {
         color: #fff;
         font-size: 14px;
     }
-    .normal-nav .nav-item .selected {
-        background-color: #fff;
-    }
-    /*选项卡,选项内容选中不同颜色*/
+    /*选项卡,选项内容选中不同颜色 开始*/
     .nav-item-0 a:hover, .nav-item-0.selected,
     .nav-item-3 a:hover, .nav-item-3.selected,
-    .pannel-0 .highlight, .pannel-0 a:hover,
-    .pannel-3 .highlight, .pannel-3 a:hover{
+    .pannel-0 a.highlight, .pannel-0 a:hover,
+    .pannel-3 a.highlight, .pannel-3 a:hover{
+        background-color: #fff;
         color: #e54077!important;
     }
-    .nav-item-1 a:hover, .nav-item-1.selected, .nav-item-1.selected a, .nav-item-1.selected i,
-    .nav-item-11 a:hover, .nav-item-11.selected, .nav-item-11.selected a, .nav-item-11.selected i,
-    .nav-item-5 a:hover, .nav-item-5.selected, .nav-item-5.selected a, .nav-item-5.selected i,
-    .nav-item-9 a:hover, .nav-item-9.selected, .nav-item-9.selected a, .nav-item-9.selected i,
-    .pannel-1 a.highlight, .pannel-1 a:hover, .pannel-1.selected, .pannel-1.selected a, .pannel-1.selected i,
-    .pannel-11 a.highlight, .pannel-11 a:hover, .pannel-11.selected, .pannel-11.selected a, .pannel-11.selected i,
-    .pannel-5 a.highlight, .pannel-5 a:hover, .pannel-5.selected, .pannel-5.selected a, .pannel-5.selected i,
-    .pannel-9 a.highlight, .pannel-9 a:hover, .pannel-9.selected, .pannel-9.selected a, .pannel-9.selected i{
+    .nav-item-1 a:hover, .nav-item-1.selected,
+    .nav-item-11 a:hover, .nav-item-11.selected,
+    .nav-item-5 a:hover, .nav-item-5.selected,
+    .nav-item-9 a:hover, .nav-item-9.selected,
+    .pannel-1 a.highlight, .pannel-1 a:hover,
+    .pannel-11 a.highlight, .pannel-11 a:hover,
+    .pannel-5 a.highlight, .pannel-5 a:hover,
+    .pannel-9 a.highlight, .pannel-9 a:hover{
         color: #427def!important;
     }
-    .nav-item-2 a.highlight, .nav-item-2 a:hover, .nav-item-2.selected, .nav-item-2.selected a, .nav-item-2.selected i, .nav-item-4 a.highlight, .nav-item-4 a:hover, .nav-item-4.selected, .nav-item-4.selected a, .nav-item-4.selected i, .pannel-2 a.highlight, .pannel-2 a:hover, .pannel-2.selected, .pannel-2.selected a, .pannel-2.selected i, .pannel-4 a.highlight, .pannel-4 a:hover, .pannel-4.selected, .pannel-4.selected a, .pannel-4.selected i{
+    .nav-item-2 a:hover, .nav-item-2.selected,
+    .nav-item-4 a:hover, .nav-item-4.selected,
+    .pannel-2 a.highlight, .pannel-2 a:hover,
+    .pannel-4 a.highlight, .pannel-4 a:hover{
         color: #6347ed!important;
     }
-    .nav-item-6 a.highlight, .nav-item-6 a:hover, .nav-item-6.selected, .nav-item-6.selected a, .nav-item-6.selected i, .pannel-6 a.highlight, .pannel-6 a:hover, .pannel-6.selected, .pannel-6.selected a, .pannel-6.selected i{
+    .nav-item-6 a:hover, .nav-item-6.selected,
+    .pannel-6 a.highlight, .pannel-6 a:hover{
         color: #fa5c5c!important;
     }
-    .nav-item-12 a.highlight, .nav-item-12 a:hover, .nav-item-12.selected, .nav-item-12.selected a, .nav-item-12.selected i, .nav-item-7 a.highlight, .nav-item-7 a:hover, .nav-item-7.selected, .nav-item-7.selected a, .nav-item-7.selected i, .nav-item-8 a.highlight, .nav-item-8 a:hover, .nav-item-8.selected, .nav-item-8.selected a, .nav-item-8.selected i, .pannel-12 a.highlight, .pannel-12 a:hover, .pannel-12.selected, .pannel-12.selected a, .pannel-12.selected i, .pannel-7 a.highlight, .pannel-7 a:hover, .pannel-7.selected, .pannel-7.selected a, .pannel-7.selected i, .pannel-8 a.highlight, .pannel-8 a:hover, .pannel-8.selected, .pannel-8.selected a, .pannel-8.selected i{
+    .nav-item-12 a:hover, .nav-item-12.selected,
+    .nav-item-7 a:hover, .nav-item-7.selected,
+    .nav-item-8 a:hover, .nav-item-8.selected,
+    .pannel-12 a.highlight, .pannel-12 a:hover,
+    .pannel-7 a.highlight, .pannel-7 a:hover,
+    .pannel-8 a.highlight, .pannel-8 a:hover{
         color: #f7a831!important;
     }
-    .nav-item-10 a.highlight, .nav-item-10 a:hover, .nav-item-10.selected, .nav-item-10.selected a, .nav-item-10.selected i, .nav-item-14 a.highlight, .nav-item-14 a:hover, .nav-item-14.selected, .nav-item-14.selected a, .nav-item-14.selected i, .pannel-10 a.highlight, .pannel-10 a:hover, .pannel-10.selected, .pannel-10.selected a, .pannel-10.selected i, .pannel-14 a.highlight, .pannel-14 a:hover, .pannel-14.selected, .pannel-14.selected a, .pannel-14.selected i{
+    .nav-item-10 a:hover, .nav-item-10.selected,
+    .nav-item-14 a:hover, .nav-item-14.selected,
+    .pannel-10 a.highlight, .pannel-10 a:hover,
+    .pannel-14 a.highlight, .pannel-14 a:hover{
         color: #dd2727!important;
     }
-    .nav-item-13 a.highlight, .nav-item-13 a:hover, .nav-item-13.selected, .nav-item-13.selected a, .nav-item-13.selected i, .nav-item-15 a.highlight, .nav-item-15 a:hover, .nav-item-15.selected, .nav-item-15.selected a, .nav-item-15.selected i, .pannel-13 a.highlight, .pannel-13 a:hover, .pannel-13.selected, .pannel-13.selected a, .pannel-13.selected i, .pannel-15 a.highlight, .pannel-15 a:hover, .pannel-15.selected, .pannel-15.selected a, .pannel-15.selected i{
+    .nav-item-13 a:hover, .nav-item-13.selected,
+    .nav-item-15 a:hover, .nav-item-15.selected,
+    .pannel-13 a.highlight, .pannel-13 a:hover,
+    .pannel-15 a.highlight, .pannel-15 a:hover{
         color: #3bc7b0!important;
     }
     .normal-nav .selected {
         background-color: #fff;
     }
+    .pannel-con .CategoryMenuPannel{
+        display: none;
+    }
+     /*选项卡,选项内容选中不同颜色 结束*/
     .normal-nav .nav-item .iconfont {
         margin:0 4px 0 14px;
         height: 31px;
@@ -477,7 +494,6 @@ a:hover {
         left: 0px;
         top: 0px;
         height: 500px;
-        display: block;
     }
     .content-con .pannel-con {
         position: absolute;
