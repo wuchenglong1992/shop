@@ -23,11 +23,8 @@ output, ruby, section, summary, time, mark, audio, video {
     -webkit-user-select: auto;
 }
 img {
-    padding: 0;
     border: none;
-    margin: 0;
-    display: block;
-    vertical-align: top; /*解决父容器高度会比img高出4px*/
+    vertical-align: middle;
 }
 input {
     border: none;

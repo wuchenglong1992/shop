@@ -53,9 +53,13 @@ function hasClass(obj,cls){
 /* 显示右侧对应内容*/
 function tabCon(index){
 	var oChi = document.getElementsByClassName("CategoryMenuPannel");
+	var oPar = document.getElementsByClassName("pannel-con")[0];
+	console.log(oPar);
     [].forEach.call(oChi,function(btn,i){
     	btn.style.display = 'none';
+    	oPar.style.display = 'none';
     	if( i === index){
+    		oPar.style.display = 'block';
     		btn.style.display = 'block';
     	}
     })
