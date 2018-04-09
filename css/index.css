@@ -5,27 +5,116 @@ a:hover {
     cursor: pointer;
 }
 /*右侧导航样式开始*/
-#rightNav {
+#rightSlide {
     position: fixed;
     top: 0;
-    right: 0px;
+    bottom: 0;
+    right: 350px;
+    z-index: 3
+}
+#rightNav {
+    position: absolute;
+    left: 0px;
     height: 100%;
     width: 35px;
     background-color: black;
     z-index: 3;
 }
-    @media(max-width: 1221px){
-        #rightNav {
-            animation: hidden 0.6s;
-            animation-fill-mode:forwards;
-        }
-        #rightNav ul li:nth-of-type(2){
-           transform: translateX(-35px);
-        }
-        #rightNav ul:last-child li:nth-of-type(1){
-            transform: translateX(-35px);
-        }
+#rightCon {
+    position: absolute;
+    left: 35px;
+    height: 100%;
+    width: 280px;
+    padding-right: 35px;
+    background-color: #e6e6e6;
+}
+/*购物车开始*/
+#rightCon .shopCar {
+    height: 100%;
+    width: 100%;
+    color: gray;
+}
+#rightCon .shopCar .tm-mcTop {
+    position: relative;
+    width: 272px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 8px;
+    background-color: #e6e6e6;
+}
+#rightCon .shopCar .tm-mcTop .tm-mcChk {
+    width: 23px;
+    text-align: center;
+    float: left;
+}
+.shopCar .tm-mcTop .tm-mcChk input {
+    vertical-align: middle;
+}
+#rightCon .shopCar .tm-mcTop label {
+    display: inline-block;
+    line-height: 28px;
+    float: left;
+    font-size: 12px;
+}
+#rightCon .tm-mcList {
+    position: relative;
+}
+#rightCon .tm-mcHandler {
+    position: relative;
+    width: 100%;
+}
+#rightCon .tm-mcHandler .tm-mcTotal {
+    width: 248px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e6e6e6;
+    padding: 0;
+    color: #333;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#rightCon .tm-mcHandler .tm-mcTotal h3 {
+    float: left;
+    width: 100px;
+    height: 30px;
+    color: #000;
+    font-weight: 400;
+}
+#rightCon .tm-mcHandler .tm-mcTotal .tm-mcTotalFeeWrap {
+    float: left;
+    width: 148px;
+    height: 30px;
+    text-align: right;
+}
+#rightCon .tm-mcHandler .tm-mcCashier {
+    width: 248px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ff0036;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+#rightCon .tm-mcHandler .tm-mcCashier span {
+    margin-left: 4px;
+}
+/*购物车结束*/
+@media(max-width: 1221px){
+    #rightNav {
+        animation: hidden 0.6s;
+        animation-fill-mode:forwards;
     }
+    #rightNav ul li:nth-of-type(2){
+       transform: translateX(-35px);
+    }
+    #rightNav ul:last-child li:nth-of-type(1){
+        transform: translateX(-35px);
+    }
+}
 #rightNav ul:first-child {
     position: absolute;
     top: 40%;
