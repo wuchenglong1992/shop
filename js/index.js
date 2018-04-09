@@ -10,8 +10,9 @@ window.onload = function () {
     },true)
     oCon.addEventListener('mouseleave',function(){
     	toggleClass(oUl,'mouseleave',"selected");
-    	tabCon();
+    	tabCon('mouseleave');
     })
+    banner();
 }
 /*切换选项卡 */
 function toggleClass(parent,children,cls){
@@ -54,13 +55,102 @@ function hasClass(obj,cls){
 function tabCon(index){
 	var oChi = document.getElementsByClassName("CategoryMenuPannel");
 	var oPar = document.getElementsByClassName("pannel-con")[0];
-	console.log(oPar);
+	if(index === 'mouseleave'){
+		oPar.style.display = 'none';
+	}else{
+		oPar.style.display = 'block';
+	}
     [].forEach.call(oChi,function(btn,i){
     	btn.style.display = 'none';
-    	oPar.style.display = 'none';
     	if( i === index){
-    		oPar.style.display = 'block';
     		btn.style.display = 'block';
     	}
     })
 }
+
+/* 轮播切换*/
+function banner(){
+	var oAd = document.getElementById("ad");
+	var oLi = oAd.getElementsByClassName("main-banner");
+	var oUl = document.getElementsByClassName("slider-nav")[0].getElementsByTagName('ul')[0];
+	var oLiSlid =oUl.getElementsByTagName('li');
+	var iNow = 0;
+	var timer = setInterval(auto,3000);
+	function auto (){
+		if(iNow == oLi.length-1){
+			iNow = 0;
+		}
+		else{
+			iNow++;
+		};
+		for(var i = 0;i<oLi.length;i++){
+			fedeOut(oLi[i]);
+		}
+		fedeIn(oLi[iNow]);
+		for( item of oLiSlid){
+			if(hasClass(item,'active')){
+				removeClass(item,'active');
+			}
+		}
+		addClass(oLiSlid[iNow],'active')
+	};
+	for(var i = 0;i<oLi.length;i++)
+	{
+		oLi[i].onmouseover = function()
+		{
+			clearInterval(timer);
+		};
+		oLi[i].onmouseout = function()
+		{
+			timer = setInterval(auto,3000);
+		};
+	}
+};
+/*淡入*/
+function fedeIn(obj){
+	var iCur = getStyle(obj,'opacity');
+	if(iCur==1){return false;}
+	var value = 0;
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var iSpeed = 5;
+		if(value == 100)
+		{
+			clearInterval(obj.timer);
+		}
+		else
+		{
+			value +=iSpeed;
+			obj.style.opacity = value/100;
+			obj.style.filter = 'alpha(opacity='+value+')';
+		}
+		},30);
+};
+/*淡出*/
+function fedeOut(obj){
+	var iCur =getStyle(obj,'opacity');
+	if(iCur==0){return false;}
+	var value = 100;
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var iSpeed = -5;
+		if(value == 0){
+			clearInterval(obj.timer);
+			}
+			else
+			{
+				value +=iSpeed;
+				obj.style.opacity = value/100;
+				obj.style.filter = 'alpha(opacity='+value+')';
+				}
+		},30);
+};
+function getStyle(obj,attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	}
+	else
+	{
+		return getComputedStyle(obj,false)[attr];
+	};
+};
