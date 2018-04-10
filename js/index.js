@@ -1,5 +1,11 @@
 window.onload = function () {
-    var oUl = document.getElementsByClassName("normal-nav")[0];
+    tabmouse();
+    banner();
+    shop();
+}
+/*选项卡鼠标移入移出事件*/
+function tabmouse(){
+	var oUl = document.getElementsByClassName("normal-nav")[0];
     var oCon = document.getElementsByClassName("category-con0")[0];
     oUl.addEventListener('mouseenter',function(e){
     	var target = e.target;
@@ -12,7 +18,6 @@ window.onload = function () {
     	toggleClass(oUl,'mouseleave',"selected");
     	tabCon('mouseleave');
     })
-    banner();
 }
 /*切换选项卡 */
 function toggleClass(parent,children,cls){
@@ -154,3 +159,51 @@ function getStyle(obj,attr){
 		return getComputedStyle(obj,false)[attr];
 	};
 };
+
+/*购物车点击事件*/
+function shop(){
+	var oUl = document.getElementById("rightNav").getElementsByTagName('ul')[0];
+	var boolen = true;
+	oUl.addEventListener('click',function(e){
+		var oLi = e.target.parentNode;
+		var liName = oLi.className;
+		switch(liName)
+		{
+			case 'shop':
+				shopMove(oLi,boolen)
+				if(boolen == true ){
+					boolen = false
+				}else {
+					boolen = true
+				}
+				break;
+		}
+	},true)
+}
+/* 移动动画*/
+function shopMove(btn,boolen){
+	var winWidth = window.innerWidth;
+	var oDiv = document.getElementById("rightSlide");
+	var oLi7 = oDiv.getElementsByTagName('ul')[0].getElementsByTagName("li")[6];
+	if(boolen){
+		oDiv.style.animation = "shopShow 0.3s";
+		oDiv.style.animationFillMode = "forwards";
+		btn.style.animation = "none";
+		oLi7.style.animation = "none";
+	}else{
+		if(winWidth>=1221){
+			oDiv.style.animation = "shopHidden 0.3s";
+			oDiv.style.animationFillMode = "forwards";
+		}else {
+			oDiv.style.animation = "shopHidden2 0.3s";
+			oDiv.style.animationFillMode = "forwards";
+			setTimeout(function(){
+				btn.style.animation = "block 0.3s";
+				oLi7.style.animation = "block 0.3s";
+				btn.style.animationFillMode = "forwards";
+				oLi7.style.animationFillMode = "forwards";
+			},200)
+		}
+	}
+	
+}

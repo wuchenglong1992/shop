@@ -9,9 +9,12 @@ a:hover {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 350px;
-    z-index: 3
+    right: 35px;
+    z-index: 3;
+    /*animation:shopShow 0.6s;*/
+    /*animation-fill-mode:forwards;*/
 }
+
 #rightNav {
     position: absolute;
     left: 0px;
@@ -42,12 +45,12 @@ a:hover {
     padding-left: 8px;
     background-color: #e6e6e6;
 }
-#rightCon .shopCar .tm-mcTop .tm-mcChk {
+#rightCon .shopCar .tm-mcChk {
     width: 23px;
     text-align: center;
     float: left;
 }
-.shopCar .tm-mcTop .tm-mcChk input {
+.shopCar .tm-mcChk input {
     vertical-align: middle;
 }
 #rightCon .shopCar .tm-mcTop label {
@@ -56,12 +59,175 @@ a:hover {
     float: left;
     font-size: 12px;
 }
+#rightCon .tm-mclistDiv {
+    position: fixed;
+    top: 28px;
+    bottom: 85px;
+    width: 280px;
+    overflow: auto;
+}
+/*定义滚动条样式*/
+#rightCon .tm-mclistDiv::-webkit-scrollbar{
+    width: 5px;
+}
+#rightCon .tm-mclistDiv::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #616161;
+}
 #rightCon .tm-mcList {
+   
+}
+#rightCon .tm-mcList .tm-mcBundle {
+    padding:0 8px;
+    background-color: #fff;
+    font-size: 12px;
+}
+#rightCon li+li{
+    margin-top: 16px;
+}
+#rightCon .tm-mcList .tm-mcBundleHeader {
+    overflow: hidden;
+}
+#rightCon .tm-mcBundleHeader .tm-mcChk {
+    padding-top: 5px;
+}
+#rightCon .tm-mcBundleHeader .tm-mcTitle {
+    float: left;
+    border-bottom: 1px solid #e6e6e6;
+    width: 143px;
+    padding:5px 0 5px 26px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: url("../image/longxia.png") no-repeat 0 6px;
+}
+#rightCon .tm-mcBundleHeader .tm-mcCost {
+    width: 61px;
+    float: left;
+    padding: 5px 0;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: right;
+}
+#rightCon .tm-mcList .tm-mcBundleList {
+    overflow: hidden;
+}
+#rightCon .tm-mcBundleList .tm-mcChk {
+    padding-top: 20px;
+}
+#rightCon .tm-mcBundleList .tm-mcItem {
+    width: 50px;
+    padding-right: 5px;
+    float: left;
+}
+#rightCon .tm-mcBundleList .tm-mcItem a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin:5px 0px;
+    overflow: hidden;
+}
+#rightCon .tm-mcBundleList .tm-mcSku {
+    float: left;
+    width: 54px;
+    color: #999;
+    text-align: left;
+    padding: 13px 2px 0 0;
+}
+#rightCon .tm-mcBundleList .tm-mcSku  p {
+    height: 18px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#rightCon .tm-mcBundleList .tm-mcAmount {
+    width: 60px;
+    text-align: center;
+    float: left;
+}
+#rightCon .tm-mcBundleList .tm-mcAmount a {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    line-height: 14px;
+    margin-top: 21px;
+    border-radius: 14px;
+    vertical-align: middle;
+    border: 1px solid #bfbfbf;
     position: relative;
+    cursor: pointer;
+    visibility: hidden;
+}
+#rightCon .tm-mcList .tm-mcBundle:hover a {
+    visibility: visible;
+}
+#rightCon .tm-mcBundleList a:hover {
+    background-color:#bfbfbf;
+}
+#rightCon .tm-mcBundleList a:hover s,#rightCon .tm-mcBundleList a:hover b{
+    background-color: #fff;
+}
+#rightCon .tm-mcBundleList a s,#rightCon .tm-mcBundleList a  b{
+    position: absolute;
+    overflow: hidden;
+    background-color: #bfbfbf;
+}
+#rightCon .tm-mcBundleList a  s {
+    width: 8px;
+    height: 2px;
+    top: 6px;
+    left: 3px;
+}
+#rightCon .tm-mcBundleList a b {
+    width: 2px;
+    height: 8px;
+    top: 3px;
+    left: 6px;
+}
+#rightCon .tm-mcBundleList .tm-mcAmount span {
+    padding: 0 4px;
+    color: #999;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 21px;
+    vertical-align: middle;
+}
+#rightCon .tm-mcBundleList .tm-mcCost {
+    width: 61px;
+    float: left;
+    text-align: right;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#rightCon .tm-mcBundleList .tm-mcCost .tm-mcDel {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 0;
+    top: 3px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #bfbfbf;
+    visibility: hidden;
+}
+#rightCon .tm-mcBundleList .tm-mcCost .tm-mcDel s,#rightCon .tm-mcBundleList .tm-mcCost .tm-mcDel b {
+    transform: rotate(45deg);
+}
+#rightCon .tm-mcBundleList .tm-mcCost strong {
+    display: block;
+    padding-top: 19px;
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+    font-weight: 400;
 }
 #rightCon .tm-mcHandler {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 280px;
+    padding-bottom: 15px;
 }
 #rightCon .tm-mcHandler .tm-mcTotal {
     width: 248px;
@@ -85,13 +251,14 @@ a:hover {
     width: 148px;
     height: 30px;
     text-align: right;
+    color: #ff0036;
+    font-weight: 400;
 }
 #rightCon .tm-mcHandler .tm-mcCashier {
     width: 248px;
     height: 40px;
     line-height: 40px;
     background-color: #ff0036;
-    position: relative;
     overflow: hidden;
     cursor: pointer;
     margin: 0 auto;
@@ -103,38 +270,82 @@ a:hover {
     margin-left: 4px;
 }
 /*购物车结束*/
-@media(max-width: 1221px){
-    #rightNav {
-        animation: hidden 0.6s;
-        animation-fill-mode:forwards;
-    }
-    #rightNav ul li:nth-of-type(2){
-       transform: translateX(-35px);
-    }
-    #rightNav ul:last-child li:nth-of-type(1){
-        transform: translateX(-35px);
-    }
-}
-#rightNav ul:first-child {
+
+#rightNav ul {
     position: absolute;
-    top: 40%;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 50%;
+
 }
-#rightNav ul:last-child {
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-}
+
 #rightNav ul li {
-    position: relative;
+    position: absolute;
     width: 35px;
-    height: 35px;
     color: white;
     margin-bottom: 10px;
     text-align: center;
     line-height: 35px;
     background-color: #000;
+}
+#rightNav ul li:nth-child(1){
+    top: 30%;
+}
+#rightNav ul li:nth-child(2){
+    top: 35%;
+}
+#rightNav ul li:nth-child(3){
+    top: 40%;
+}
+#rightNav ul li:nth-child(4){
+    top: 45%;
+}
+#rightNav ul li:nth-child(5){
+    top: 50%;
+}
+#rightNav ul li:nth-child(6){
+    top: 55%;
+}
+#rightNav ul li:nth-child(7){
+    bottom: 0;
+}
+@media(max-width: 1221px){
+   #rightSlide {
+        animation: hidden 0.3s;
+        animation-fill-mode:forwards;
+   }
+   #rightNav ul li:nth-child(2),#rightNav ul li:nth-child(7){
+        animation:block 0.3s;
+        animation-fill-mode:forwards;
+    }
+}
+@keyframes move {
+    from {opacity: 0;transform: translateX(0px)}
+    to {opacity: 1;transform: translateX(35px)}
+}
+@keyframes leave {
+    from {opacity: 1;transform: translateX(35px)}
+    to {opacity: 0;transform: translateX(0px)}
+}
+@keyframes hidden {
+    from {transform: translateX(0px)}
+    to {transform: translateX(35px)}
+}
+@keyframes block {
+    from {transform: translateX(0px)}
+    to {transform: translateX(-35px)}
+}
+@keyframes shopShow{
+    from{transform: translateX(0px)}
+    to {transform: translateX(-280px)}
+}
+@keyframes shopHidden{
+    from{transform: translateX(-280px)}
+    to {transform: translateX(0px)}
+}
+@keyframes shopHidden2{
+    from{transform: translateX(-280px)}
+    to {transform: translateX(35px)}
 }
 #rightNav ul li .navigationInto {
     position: absolute;
@@ -168,22 +379,6 @@ a:hover {
 }
 #rightNav ul li .iconfont {
     font-size: 22px;
-}
-@keyframes move {
-    from {opacity: 0;transform: translateX(0px)}
-    to {opacity: 1;transform: translateX(35px)}
-}
-@keyframes leave {
-    from {opacity: 1;transform: translateX(35px)}
-    to {opacity: 0;transform: translateX(0px)}
-}
-@keyframes hidden {
-    from {transform: translateX(0px)}
-    to {transform: translateX(35px)}
-}
-@keyframes block {
-    from {transform: translateX(35px)}
-    to {transform: translateX(0px)}
 }
 /*右侧导航样式结束*/
 
@@ -1271,9 +1466,9 @@ a:hover {
         #content .wonderful-con {
             width: 982px;
         }
-         .wonderful-con .wonderful-line {
+        /*.wonderful-con .wonderful-line {
             height: 299px;
-        }
+        }*/
         .wonderful-con .wonderful-line .wonderful-item {
             width: 187px;
             margin-right:11px;

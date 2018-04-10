@@ -1,0 +1,11 @@
+#mallPage {
+	min-width: 1190px;
+}
+#mallPage .header {
+	width: 1190px;
+	height: 88px;
+	margin: 0 auto;
+}
+.header img {
+	width: 190px;
+}
