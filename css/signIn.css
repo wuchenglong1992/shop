@@ -3,9 +3,192 @@
 }
 #mallPage .header {
 	width: 1190px;
-	height: 88px;
+	height: 150px;
 	margin: 0 auto;
 }
 .header img {
 	width: 190px;
 }
+#mallPage .content {
+	position: relative;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.content .login-banner-wrap {
+	width: 100%;
+	background-color: rgb(243, 77, 92);
+}
+.content .login-banner-wrap .inner {
+	width: 1190px;
+	margin: auto;
+}
+.content .form {
+	position: absolute;
+	right: 425px;
+	height: 380px;
+	top: 91px;
+	width: 340px;
+	background-color: #fff;
+	padding: 9px 5px;
+}
+.content .form input {
+	width: 240px;
+	line-height: 18px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+	color: #9b9b9b;
+	padding: 11px 8px 11px 50px;
+}
+/*取消number时的上下小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;}
+.content .form button {
+	width: 300px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #ff0036;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+.content .form .static-form {
+	padding: 25px 5px 20px 26px;
+}
+.form .static-form .login-title {
+	height: 18px;
+	color: #3c3c3c;
+	line-height: 18px;
+	font-size: 16px;
+	font-weight: 700;
+	margin-top: 15px;
+}
+.form .static-form .username-field,.form .static-form .pwd-field {
+	position: relative;
+	margin-top: 25px;
+}
+.form .static-form .submit {
+	margin-top: 20px;
+}
+.form .static-form span {
+	position: absolute;
+	left: 0;
+	top: 1px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ddd;
+	text-align: center;
+	color: #606060;
+}
+.form .static-form i {
+	position: absolute;
+	right: 25px;
+	top: 1px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}
+.form .static-form i:hover {
+	color: blue;
+}
+.form .login-links {
+	margin-top: 25px;
+	overflow: hidden;
+	text-align: right;
+}
+.form .login-links a {
+	margin-right: 10px;
+	color: #6c6c6c;
+	text-decoration:none;
+}
+.form .login-links a:hover {
+	color: #f40;
+}
+/*脚部区域样式开始*/
+    #foot {
+        width: 100%;
+    }
+    #foot .tmall-ensure {
+        width: 1190px;
+        height: 100px;
+        background:url("../image/TB14dANRXXXXXbdXXXXXXXXXXXX-1190-100.jpg") no-repeat;
+        margin: 25px auto;
+    }
+    #foot .tmall-desc {
+        width: 1190px;
+        padding-top: 22px;
+        height: 190px;
+        margin: auto;
+        border-top: 1px solid #ededed;
+    }
+     #foot .tmall-desc dl {
+        float: left;
+        width: 186px;
+        padding-left: 52px;
+    }
+    #foot .tmall-desc dl dt {
+        color: #646464;
+        font-size: 16px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+    }
+    #foot .tmall-desc dl a {
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        text-align: left;
+        height: 20px;
+        line-height: 20px;
+        color: #8b8b8b;
+        text-decoration: none;
+    }
+    #foot .tmall-copyright {
+        border-top: 2px solid #FF0036;
+        background: #000;
+        text-align: left;
+        height: 30px;
+    }
+    #foot .tmall-copyright .footer-tmallinfo {
+        width: 1190px;
+        margin: 0 auto;
+        line-height: 25px;
+        text-align: center;
+    }
+    .tmall-copyright .footer-tmallinfo p {
+        display: inline-block;
+        color: #fff;
+    }
+    .tmall-copyright .footer-tmallinfo p span {
+        margin: 0 6px;
+    }
+    .tmall-copyright .footer-tmallinfo a {
+        color: #fff;
+        text-decoration: none;
+    }
+    @media (max-width: 1210px) {
+        #foot .tmall-ensure {
+            width: 990px;
+            background:url("../image/TB1I8svRXXXXXcUXpXXXXXXXXXX-990-100.jpg");
+        }
+        #foot .tmall-desc {
+            width: 990px;
+        }
+        #foot .tmall-desc dl {
+            float: left;
+            width: 200px;
+            padding-left: 15px;
+        }
+        #foot .tmall-copyright .footer-tmallinfo {
+            width: 990px;
+        }
+        #mobile {
+            width: 110px!important;
+        }
+    }
+/* 脚部样式结束*/
