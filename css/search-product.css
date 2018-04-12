@@ -730,39 +730,351 @@
     #content {
         width: 100%;
     }
-    #content .main {
-        margin: 0 auto;
-        width: 1190px
-    }
-    #content .main .crumb {
-        padding-bottom: 8px;
-        height: 38px;
-        background-color: #fff;
-    }
-    #content .main .crumb .crumbCon {
-        height: 100%;
-        margin: 0 auto;
-        line-height: 27px;
-        border-top: 1px solid #e5e5e5;
-        position: relative;
-    }
-    #content .main .crumb .crumbCon .crumbSlide {
-        margin: 3px 180px 0 25px;
-    }
-    #content .main .crumb .crumbCon .crumbSlide .crumbClip {
-        position: absolute;
-        width: 100%;
-    }
-    #content .main .crumb .crumbCon .crumbTitle {
-        position: absolute;
-        right: 10px;
-        top: 7px;
-        color: #999;
-        line-height: 22px;
-        font-size: 12px;
-    }
-    @media (max-width: 1121px){
         #content .main {
-            width: 990px
+            margin: 0 auto;
+            width: 1190px
         }
-    }
+        /*内容导航*/
+        #content .main .crumb {
+            padding-bottom: 8px;
+            height: 38px;
+            background-color: #fff;
+        }
+        #content .main .crumb .crumbCon {
+            height: 100%;
+            margin: 0 auto;
+            line-height: 27px;
+            border-top: 1px solid #e5e5e5;
+            position: relative;
+        }
+        #content .main .crumb .crumbCon .crumbSlide {
+            height: 100%;
+            margin: 3px 180px 0 25px;
+        }
+        #content .main .crumb .crumbCon .crumbSlide .crumbSlideUl>li {
+            float: left;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop {
+            display: inline-block;
+            border:1px dashed #ddd;
+            position: relative;
+            padding: 0 8px;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background-color: rgba(0,0,0,.8);
+            width: 870.5px;
+            border:1px solid #dbdbdb;
+            border-radius:3px;
+            padding-top:14px;
+            padding-bottom: 5px;
+            display: none;
+            z-index: 1;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop:hover {
+             border:1px dashed red;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop:hover b {
+            transform: rotate(180deg);
+            transition:transform .4s;
+            transform-origin:50% 30%;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop:hover .crumbDrop-bd {
+            display: block;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd ul {
+            float: left;
+            border-left: 1px dashed #d5d5d5;
+            margin-left: -1px;
+            height: 132px;
+            margin-bottom: 15px;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd ul li {
+            float: none;
+            padding: 0 20px 0 16px;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd ul li a {
+            color: #fff;
+            display: block;
+            width: 102px;
+            height: 22px;
+            line-height: 22px;
+            text-indent:5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .crumb .crumbCon .crumbSlide .crumbDrop b {
+            position: absolute;
+            right: 0px;
+            top: 13px;
+            width: 0;
+            height: 0;
+            border-width: 3px;
+            border-style: solid dashed dashed;
+            border-color: #bbb transparent transparent;
+            font-size: 0;
+            line-height: 0;
+        }
+        .crumb .crumbCon .crumbSlide .ar-fd-find {
+            display: block;
+            width: 170px;
+            height: 24px;
+            background-image: url(../image/faxian.jfif);
+        }
+        .crumb .crumbCon .crumbTitle {
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            color: #999;
+            line-height: 22px;
+            font-size: 12px;
+        }
+        /*内容品牌区*/
+        #J_NavAttrsForm {
+            position: relative;
+            border-top: 1px solid #E6E2E1;
+            padding-bottom: 8px;
+            margin-bottom: 34px;
+            background-color: rgb(239,235,234);
+        }
+        #J_NavAttrsForm .attrKey {
+            width: 10%;
+            padding-top: 9px;
+            height: 16px;
+            line-height: 16px;
+            float: left;
+            text-indent:13px;
+            color: #B0A59F;
+        }
+        #J_NavAttrsForm .attrValues {
+            float: left;
+            width: 90%;
+            padding-top: 6px;
+            position: relative;
+            background-color: #fff;
+        }
+        #J_NavAttrsForm .attrValues .av-options {
+            position: absolute;
+            top: 4px;
+            right: 0px;
+            width: 105px;
+        }
+        #J_NavAttrsForm .attrValues .av-options a {
+            height: 25px;
+            line-height: 25px;
+            color: #806f66;
+            float: right;
+            padding-right: 6px;
+        }
+        #J_NavAttrsForm .brandAttr {
+            border: 2px solid#D1CCC7;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .av-collapse {
+            margin:0 105px 5px 25px;
+            max-height: 106px;
+            padding-top: 1px;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li {
+            border: 1px solid #e1e1e1;
+            width: 104px;
+            text-align: center;
+            height: 52px;
+            line-height: 52px;
+            overflow: hidden;
+            float: left;
+            margin: -1px -1px 0 0;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li a {
+            padding: 0;
+            line-height: 52px;
+            height: 50px;
+            width: 102px;
+            overflow: hidden;
+            border: 1px solid transparent;
+            display: block;
+            color: red;
+            font-size: 12px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li a:hover {
+            border:1px solid red;
+        }
+        .attrValues .av-collapse>li a img {
+            width: 80px;
+            height: 40px;
+            margin:6px 12px;
+            float: left;
+        }
+        #J_NavAttrsForm .cateAttrs {
+            border-left: 1px solid#E6E2E1;
+            border-right: 1px solid#E6E2E1;
+        }
+        #J_NavAttrsForm .cateAttrs .av-collapse-kind {
+            min-height: 58px;
+            margin-left: 25px;
+            margin-right: 50px;
+        }
+        #J_NavAttrsForm .cateAttrs .av-collapse-kind li {
+            float: left;
+            margin: 0 5px 8px 0;
+            width: 180px;
+            overflow: hidden;
+        }
+        #J_NavAttrsForm .av-collapse-kind li a {
+            position: relative;
+            color: #806F66;
+            display: inline-block;
+            padding: 1px 20px 1px 4px;
+            line-height: 20px;
+            height: 20px;
+            white-space: nowrap;
+        }
+        #J_NavAttrsForm .av-collapse-kind li a:hover {
+            color: red;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li a:hover img {
+            display: none;
+        }
+        
+        #J_NavAttrsForm .attrExtra-more {
+            position: absolute;
+            right: 0;
+            bottom: -24px;
+            padding: 3px 10px;
+            height: 18px;
+            line-height: 18px;
+            background-color: rgb(239,235,234);
+        }
+        #J_NavAttrsForm .propAttrs {
+            border-top: 1px solid #D1CCC7;
+        }
+        #J_NavAttrsForm .propAttrs .attr {
+            background-color: #F7F5F5;
+            border-color: #E6E2E1 #E6E2E1 #D1CCC7;
+            border-style: solid solid dotted;
+            border-width: 0 1px 1px;
+        }
+        #J_NavAttrsForm .propAttrs .av-collapse-kind {
+            height: 25px;
+            margin: 0 105px 0 25px
+        }
+        #J_NavAttrsForm .propAttrs .av-collapse-kind li {
+            float: left;
+            margin: 0 25px 10px 0;
+            overflow: hidden;
+        }
+        @media (max-width: 1121px){
+            #content .main {
+                width: 990px
+            }
+            .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd {
+                width: 730px;
+            }
+        }
+
+        /*内容过滤器样式*/
+        #content .main .filter {
+            margin: 0px 0 10px;
+            padding: 5px;
+            position: relative;
+            z-index: 10;
+            background: #faf9f9;
+            color: #806f66;
+            font-size: 0;
+        }
+        #content .main .filter a.active {
+            color: red;
+        }
+        #content .main .filter>a {
+            border:1px solid#ccc;
+            display: inline-block;
+            margin-left: -1px;
+            overflow: hidden;
+            padding: 0 15px 0 5px;
+            height: 21px;
+            line-height: 20px;
+            font-size: 12px;
+            position: relative;
+            float: left;
+        }
+        #content .main .filter a:hover {
+            color: red;
+        }
+        #content .main .filter .xiala {
+            font-size: 12px;
+        }
+        #content .main .filter>a .iconfont{
+            font-size: 12px;
+            position: absolute;
+            top:1px;
+        }
+        #content .main .filter .shang {
+            top: -2px;
+            right: 2px;
+        }
+        #content .main .filter .xia {
+            top: 4px;
+            right: 2px;
+        }
+        #content .main .filter .city {
+            width: 113px;
+            float: left;
+            font-size: 12px;
+            height: 21px;
+            line-height: 22px;
+            border: 1px solid#ccc;
+            margin-left: 5px;
+            position: relative;
+        }
+        #content .main .filter .city .fA-label {
+            text-decoration: none;
+            background-color: #F7F5F5;
+            position: absolute;
+            padding-left: 4px;
+            height: 100%;
+            line-height: 22px;
+            color: #B0A59F;
+        }
+        #content .main .filter .city .fA-text {
+            display: inline-block;
+            height: 100%;
+            margin-left: 52px;
+            width: 54px;
+            text-align: center;
+        }
+        #content .main .filter .city .f-ico-triangle-rb {
+            position: absolute;
+            border: 3px dashed transparent;
+            border-right: 3px solid #806F66;
+            border-bottom: 3px solid #806F66;
+            line-height: 0;
+            height: 0;
+            width: 0;
+            bottom: 2px;
+            right: 2px;
+        }
+        #content .main .filter .ui-page-s {
+            float: right;
+            font-size: 12px;
+        }
+        #content .main .filter .ui-page-s b {
+            
+            height: 22px;
+            line-height: 22px;
+            font-weight: 400;
+        }
+        #content .main .filter .ui-page-s a {
+            width: 19px;
+            padding: 4px 2px 2px;
+            line-height: 1;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #E5E5E5;
+        }
