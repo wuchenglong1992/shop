@@ -90,13 +90,9 @@ body, button, input, select, textarea {
     display: inline-block
 }
 
-.clearfix {
-    height: 1%
-}
 
 .clearfix {
-    display: block;
-    overflow: hidden
+    display: block
 }
 
 .ellipsis {
