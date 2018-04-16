@@ -812,6 +812,9 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        .crumb .crumbCon .crumbSlide .crumbDrop .crumbDrop-bd ul li a:hover {
+            color: red;
+        }
         .crumb .crumbCon .crumbSlide .crumbDrop b {
             position: absolute;
             right: 0px;
