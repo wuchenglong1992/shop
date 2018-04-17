@@ -108,14 +108,14 @@
     <div id="header">
     	<div class="head-content">
     		<h1 id="mallLogo">
-    			<img src="image/search.png" class="mlogo">
+    			<!-- <img src="image/xiagaologo.png" class="mlogo"> -->
     		</h1>
     		<div id="shopExtra">
     			<div class="slogo">
     				<a href=""><strong>韩都衣舍旗舰店</strong></a>
     				<div class="bShop">
     					<span class="flagship-icon">品牌直营</span>
-    					<a href=""></a>
+    					<a href="" class="ww-online"></a>
     				</div>
     			</div>
     			<div class="shop-info">
@@ -330,7 +330,7 @@
     							</ul>
     						</dd>
     					</dl>
-    					<dl class="tb-amount">
+    					<dl class="tb-amount tb-prop clearfix">
     						<dt class="tb-metatit">数量</dt>
     						<dd>
     							<span>
@@ -340,13 +340,299 @@
     							<em class="J_EmStock">库存14件</em>
     						</dd>
     					</dl>
+    					<div class="tb-action clearfix">
+    						<div class="tb-btn-buy"><a href="">立即购买</a></div>
+    						<div class="tb-btn-basket"><a href="">加入购物车</a></div>
+    					</div>
     				</div>
-    				<div class="tm-ser"></div>
+    				<div class="tm-ser">
+    					<dl>
+    						<dt class="tb-metatit">服务承诺</dt>
+    						<dd>
+    							<ul class="tb-serPromise">
+    								<li><a href="">正品保证</a></li>
+    								<li><a href="">极速退款</a></li>
+    								<li><a href="">赠运费险</a></li>
+    								<li><a href="">七天无理由退换</a></li>
+    							</ul>
+    						</dd>
+    					</dl>
+    				</div>
     			</div>
     		</div>
-    		<div class="ald-skuRight"></div>
+    		<div class="ald-skuRight">
+    			<div class="ald-hd">
+    				<s></s>
+    				<span>看了又看</span>
+    			</div>
+    			<div class="ald-carousel">
+    				<div class="wrapCon">
+    					<ul class="ald-switchable-content">
+    						<li>
+    							<div class="img">
+    								<a href=""><img src="image/31.jpg"></a>
+    								<p class="look_price">¥139.00</p>
+    							</div>
+    						</li>
+    						<li>
+    							<div class="img">
+    								<a href=""><img src="image/32.jpg"></a>
+    								<p class="look_price">¥139.00</p>
+    							</div>
+    						</li>
+    						<li>
+    							<div class="img">
+    								<a href=""><img src="image/33.jpg"></a>
+    								<p class="look_price">¥139.00</p>
+    							</div>
+    						</li>
+    						<li>
+    							<div class="img">
+    								<a href=""><img src="image/33.jpg"></a>
+    								<p class="look_price">¥139.00</p>
+    							</div>
+    						</li>
+    						<li>
+    							<div class="img">
+    								<a href=""><img src="image/33.jpg"></a>
+    								<p class="look_price">¥139.00</p>
+    							</div>
+    						</li>
+    					</ul>
+    				</div>
+    				<ul class="ald-switchable-trigger">
+    					<li class="ald-switchable-prev-btn"></li>
+    					<li class="ald-switchable-next-btn"></li>
+    				</ul>
+    			</div>
+    		</div>
     	</div>
-    	<div id="bd"></div>
+    	<div id="bd">
+    		<div class="col-main">
+    			<div id="mainwrap">
+    				<div id="J_TabBarBox">
+    					<ul id="J_TabBar">
+    						<li class="tm-selected"><a href="">商品详情</a></li>
+    						<li ><a href="">累计评价<em>1111</em></a></li>
+    					</ul>
+    				</div>
+    				<!-- 商品详情 -->
+    				<div class="attributes" >
+    					<div class="attributes-list">
+    						<div class="tm_brandAttr">
+    							品牌名称：<b>PLAYBOY/花花公子</b>
+    						</div>
+    						<p class="attr-list-hd">产品参数：</p>
+    						<ul id="J_AttrUL" class="clearfix">
+    							<li>上市年份季节: 2018年春季</li>
+    							<li>厚薄: 薄</li>
+    							<li>材质成分: 聚酯纤维100%</li>
+    							<li>货号: 7723-cl</li>
+    							<li>销售渠道类型: 纯电商(只在线上销售)</li>
+    							<li>品牌: PLAYBOY/花花公子</li>
+    							<li>基础风格: 青春流行</li>
+    						</ul>
+    					</div>
+    					<div>
+    						<img src="image/detail-pro.jpg">
+    					</div>
+    				</div>
+    				<!-- 商品评价 -->
+    				<div class="J_Reviews" style="display: none">
+    					<div class="rate-header">
+    						<div class="rate-score">
+    							<h4>与描述相符</h4>
+    							<strong>4.8</strong>
+    							<p>
+    								<span class="score-value-no">
+    									<em></em>
+    								</span>
+    							</p>
+    						</div>
+    						<div class="rate-tag-box">
+    							<div class="rate-tag-label">
+    								<span>大家都写到</span>
+    							</div>
+    							<div class="rate-tag-list">
+    								<span><a href="">质量不错(211)</a></span>
+    								<span><a href="">穿着美(123)</a></span>
+    								<span><a href="">很舒适(88)</a></span>
+    								<span><a href="">码数很准(74)</a></span>
+    								<span><a href="">外形好看(69)</a></span>
+    								<span><a href="">态度不错(52)</a></span>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="rate-toolbar">
+    						<span>
+    							<input type="radio" name="radiogrounp">
+    							<label>全部</label>
+    							<input type="radio" name="radiogrounp">
+    							<label>追评 (43)</label>
+    							<input type="radio" name="radiogrounp">
+    							<label>图片 (205)</label>
+    						</span>
+    					</div>
+    					<div class="rate-grid">
+    						<table>
+    							<tbody>
+    								<tr>
+    									<td class="tm-col-master">
+    										<div class="tm-rate-content">
+    											<div class="tm-rate-fulltxt">
+    												东西确实不错，没有明显的起球，掉色的现象，摸着的感觉还可以，没有劣质感。 穿着也挺舒服，穿着也挺舒服，穿着也挺舒服。重要的事说三遍，价格公道，推荐购买！
+    											</div>
+    											<div class="tm-m-photos">
+    												<ul class="tm-m-photos-thumb">
+    													<li class="tm-current">
+    														<img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_40x40.jpg">
+    														<b class="tm-photos-arrow"></b>
+    													</li>
+    													<li>
+    														<img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_40x40.jpg">
+    													</li>
+    													<li>
+    														<img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_40x40.jpg">
+    													</li>
+    												</ul>
+    												<div class="tm-m-photo-viewer">
+    													<a href=""><img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_400x400.jpg"></a>
+    												</div>
+    											</div>
+    										</div>
+    										<div class="tm-rate-date">04.10</div>
+    									</td>
+    									<td class="col-meta">
+    										<div class="rate-sku">
+    											<p>
+    												<span>颜色：</span>
+    												2258藏青色-中长款
+    											</p>
+    											<p>
+    												<span>尺码：</span>
+    												180/XXL
+    											</p>
+    										</div>
+    									</td>
+    									<td class="col-author">
+    										<div class="rate-user-info">
+    											a<span>***</span>n<span>（匿名）</span>
+    										</div>
+    									</td>
+    								</tr>
+    								<tr>
+    									<td class="tm-col-master">
+    										<div class="tm-rate-content">
+    											<div class="tm-rate-fulltxt">
+    												东西确实不错，没有明显的起球，掉色的现象，摸着的感觉还可以，没有劣质感。 穿着也挺舒服，穿着也挺舒服，穿着也挺舒服。重要的事说三遍，价格公道，推荐购买！
+    											</div>
+    											<div class="tm-m-photos">
+    												<ul class="tm-m-photos-thumb">
+    													<li>
+    														<img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_40x40.jpg">
+    														<b class="tm-photos-arrow"></b>
+    													</li>
+    												</ul>
+    												<div class="tm-m-photo-viewer" style="display: none">
+    													<a href=""><img src="image/TB2Cal0ihSYBuNjSsphXXbGvVXa_!!0-rate.jpg_400x400.jpg"></a>
+    												</div>
+    											</div>
+    										</div>
+    										<div class="tm-rate-date">04.10</div>
+    									</td>
+    									<td class="col-meta">
+    										<div class="rate-sku">
+    											<p>
+    												<span>颜色：</span>
+    												2258藏青色
+    											</p>
+    											<p>
+    												<span>尺码：</span>
+    												180/XXL
+    											</p>
+    										</div>
+    									</td>
+    									<td class="col-author">
+    										<div class="rate-user-info">
+    											a<span>***</span>n<span>（匿名）</span>
+    										</div>
+    									</td>
+    								</tr>
+    							</tbody>
+    						</table>
+    					</div>
+    					<div class="rate-page">
+    						<div class="ui-page">
+								<div class="ui-page-wrap">
+									<div class="ui-page-num">
+										<b><<上一页</b>
+										<b>1</b>
+										<a href="">2</a>
+										<a href="">3</a>
+										<b>...</b>
+										<a href="">下一页>></a>
+									</div>
+									<div class="ui-page-skip">
+										共100页，到第
+										<input type="text" name="" value="1">
+										页
+										<button type="submit">确认</button>
+									</div>
+								</div>
+							</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- 左侧内容 -->
+    		<div class="col-sub">
+    			<div id="J_DcShopArchive">
+    				<h3 class="hd">
+    					<a href="">春雷鞋类专营店</a>
+    					<a href="" class="ww-online"></a>
+    				</h3>
+    				<div class="shop-cert">
+    					<span class="ico">7</span>
+    					<span class="text">天猫7年店</span>
+    				</div>
+    				<div class="main-info">
+    					<div class="shopdsr-item">
+    						<div class="shopdsr-title">
+    							描 述
+    						</div>
+    						<div class="shopdsr-scroe">
+    							<span>4.8</span>
+    							<span class="">-</span>
+    						</div>
+    					</div>
+    					<div class="shopdsr-item">
+    						<div class="shopdsr-title">
+    							服 务
+    						</div>
+    						<div class="shopdsr-scroe">
+    							<span>4.8</span>
+    							<span class="iconfont icon-icon-arrow-top4"></span>
+    						</div>
+    					</div>
+    					<div class="shopdsr-item">
+    						<div class="shopdsr-title">
+    							物 流
+    						</div>
+    						<div class="shopdsr-scroe">
+    							<span>4.8</span>
+    							<span class="iconfont icon-icon-arrow-btm4"></span>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="btnArea">
+    					<a href="" class="enterShop">进店逛逛</a>
+    					<a href="" class="favShop">收藏店铺</a>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- 右侧内容 -->
+    		<div class="col-extra"></div>
+    	</div>
     </div>
     <div id="foot">
         <div class="tmall-ensure"></div>

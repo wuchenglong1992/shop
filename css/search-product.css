@@ -642,26 +642,25 @@
     }
     #search .search-head {
         width: 1190px;
-        padding-top: 26px;
         margin: 0 auto;
         overflow: hidden;
     }
     #search .search-head h1 {
         float: left;
         width: 280px;
-        height: 64px;
+        height: 84px;
     }
     #search .search-head .mlogo {
         display: block;
-        height: 30px;
-        font-size: 22px;
+        height: 84px;
         width: 190px;
         overflow: hidden;
-        background:url(../image/search.png) no-repeat;
+        background:url(../image/xiagaologo.png) no-repeat;
     }
     #search .search-head .header-extra {
         display: inline-block;
         overflow: hidden;
+        margin-top: 26px;
     }
     #mallSearch {
         width: 597px;
