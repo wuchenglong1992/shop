@@ -643,7 +643,7 @@
     #search .search-head {
         width: 1190px;
         margin: 0 auto;
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
     #search .search-head h1 {
         float: left;
@@ -659,11 +659,12 @@
     }
     #search .search-head .header-extra {
         display: inline-block;
-        overflow: hidden;
+        
         margin-top: 26px;
     }
     #mallSearch {
         width: 597px;
+        position: relative;
     }
     #mallSearch .mallSearch-input{
         height: 30px;
@@ -691,6 +692,38 @@
         overflow: hidden;
         float: right;
     }
+    /*搜索框样式*/
+    .search-lenovo {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        border:1px solid#ddd;
+        border-top:none;
+        z-index: 10;
+        display: none;
+        background-color: #fff;
+    }
+    .search-lenovo li {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+    }
+    .search-lenovo li span {
+        float: right;
+        padding-right: 10px;
+        color: #666;
+    }
+    .search-lenovo li a{
+        color: #000;
+    }
+    .search-lenovo li:hover {
+        background-color: red;
+    }
+    .search-lenovo li:hover a,.search-lenovo li:hover span {
+        color: #fff;
+    }
+    /*搜索框样式结束*/
     #search .search-head .header-extra .relKeyTop {
         width: 597px;
         padding: 4px 0 0;
@@ -698,11 +731,14 @@
         height: 16px;
         overflow: hidden;
     }
-    #search .search-head .header-extra .relKeyTop li {
+    #search .search-head .header-extra .relKeyTop li{
         display: inline-block;
         border-left: 1px solid #ccc;
         line-height: 1.1;
         padding: 0 12px;
+    }
+    #search .search-head .header-extra .relKeyTop li:first-child{
+        border-left: none;
     }
     .relKeyTop li a {
         color: #999;
@@ -880,13 +916,35 @@
         #J_NavAttrsForm .brandAttr {
             border: 2px solid#D1CCC7;
         }
-        #J_NavAttrsForm .brandAttr .attrValues .av-collapse {
+        
+        #J_NavAttrsForm .brandAttr .attrValues .row-2 {
             margin:0 105px 5px 25px;
-            max-height: 106px;
             padding-top: 1px;
+        }
+        .brandAttr .av-collapse {
+            max-height: 106px;
             overflow: hidden;
         }
-        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li {
+        .cateAttrs .av-collapse {
+            max-height: 58px;
+            overflow: hidden;
+        }
+        .av-expand{
+            height: auto;
+        }
+        .av-scroll {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 265px;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .row-2::-webkit-scrollbar {
+            width: 5px;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .row-2::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            background: #616161;
+        }
+        #J_NavAttrsForm .brandAttr .attrValues .row-2>li {
             border: 1px solid #e1e1e1;
             width: 104px;
             text-align: center;
@@ -896,7 +954,7 @@
             float: left;
             margin: -1px -1px 0 0;
         }
-        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li a {
+        #J_NavAttrsForm .brandAttr .attrValues .row-2>li a {
             padding: 0;
             line-height: 52px;
             height: 50px;
@@ -909,10 +967,10 @@
             white-space: nowrap;
             text-overflow: ellipsis;
         }
-        #J_NavAttrsForm .brandAttr .attrValues .av-collapse>li a:hover {
+        #J_NavAttrsForm .brandAttr .attrValues .row-2>li a:hover {
             border:1px solid red;
         }
-        .attrValues .av-collapse>li a img {
+        .attrValues .row-2>li a img {
             width: 80px;
             height: 40px;
             margin:6px 12px;
@@ -923,7 +981,6 @@
             border-right: 1px solid#E6E2E1;
         }
         #J_NavAttrsForm .cateAttrs .av-collapse-kind {
-            min-height: 58px;
             margin-left: 25px;
             margin-right: 50px;
         }
@@ -957,6 +1014,7 @@
             height: 18px;
             line-height: 18px;
             background-color: rgb(239,235,234);
+            cursor: pointer;
         }
         #J_NavAttrsForm .propAttrs {
             border-top: 1px solid #D1CCC7;
@@ -976,6 +1034,9 @@
             margin: 0 25px 10px 0;
             overflow: hidden;
         }
+        #J_NavAttrsForm .propAttrs .j_MoreAttrsCont {
+            display: none;
+        }
         @media (max-width: 1121px){
             #content .main {
                 width: 990px
@@ -990,7 +1051,7 @@
             margin: 0px 0 10px;
             padding: 5px;
             position: relative;
-            z-index: 10;
+            z-index: 2;
             background: #faf9f9;
             color: #806f66;
             font-size: 0;
@@ -1009,6 +1070,10 @@
             font-size: 12px;
             position: relative;
             float: left;
+            color: #666;
+        }
+        #content .main .filter>a.active {
+            color: red;
         }
         #content .main .filter a:hover {
             color: red;
@@ -1021,11 +1086,11 @@
             position: absolute;
             top:1px;
         }
-        #content .main .filter .shang {
+        #content .main .filter>a span.shang {
             top: -2px;
             right: 2px;
         }
-        #content .main .filter .xia {
+        #content .main .filter>a span.xia {
             top: 4px;
             right: 2px;
         }
@@ -1073,10 +1138,20 @@
             line-height: 21px;
             float: left; 
             font-size: 12px;
+            position: relative;
+        }
+        #content .main .filter .fMenu .fMenu-con {
+            position: absolute;
+            width: 100%;
             background-color: #fff;
             border:1px solid #ddd;
             overflow: hidden;
-            position: relative;
+        }
+        #content .main .filter .fMenu .fMenu-collapse{
+            height: 21px;
+        }
+        #content .main .filter .fMenu .fMenu-expand {
+            height: auto;
         }
         #content .main .filter .fMenu a {
             float: right;
@@ -1092,7 +1167,7 @@
         }
         #content .main .filter .fMenu label {
             display: inline-block;
-            height: 100%;
+            height: 21px;
             line-height: 21px;
             float: left;
             text-indent:5px;
@@ -1124,6 +1199,9 @@
         #content .main .view {
             width: 1210px;
             margin:auto;
+        }
+        .productHide {
+            display: none
         }
         #content .view .product {
             width: 220px;
@@ -1182,6 +1260,9 @@
             margin-top: 14px;
             font-size: 14px;
             text-align: center;
+        }
+        .product .product-iWrap .productThumb a:hover {
+            background-color: red;
         }
         .product .product-iWrap .productThumb a.proThumb-prev {
             margin-left:-5px;
@@ -1242,7 +1323,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        .view .product  .productTitle a {
+            .product .productTitle a {
             color: #333;
         }
         .view .product  .productShop {
@@ -1252,8 +1333,12 @@
             height: 22px;
             line-height: 22px;
         }
-        .view .product  .productShop a {
-            color: #888;
+            .product  .productShop a {
+                color: #888;
+            }
+        .product .productTitle a:hover,.product  .productShop a:hover {
+            color: red;
+            text-decoration: underline;
         }
         .view .product  .productStatus {
             border-top: 1px solid #eee;
@@ -1406,6 +1491,9 @@
                 background-color: #806f66;
                 border: 1px solid #6b635f;
             }
+            .shop-head .shopHead-enter .sHe-shop:hover {
+                opacity: .8;
+            }
             .shop-head .shopHead-enter .sHe-shop i {
                 padding-left: 38px;
                 font-family: \5B8B\4F53;
@@ -1422,6 +1510,9 @@
                 background-color: #F7F5F5;
                 color: #595959;
                 line-height: 20px;
+            }
+            .shop-head .shopHead-enter .sHe-product:hover {
+                background-color: #fff;
             }
             .shop-head .shopHead-enter .sHe-product i {
                 position: absolute;

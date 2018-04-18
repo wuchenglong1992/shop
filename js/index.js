@@ -19,7 +19,7 @@ function tabmouse(){
     	tabCon('mouseleave');
     })
 }
-/*切换选项卡 */
+/*选项卡功能*/
 function toggleClass(parent,children,cls){
 	var oPar = parent;
 	var oChi = children;
@@ -34,27 +34,6 @@ function toggleClass(parent,children,cls){
 	}else{
 		addClass(children,cls)
 	}
-}
-function addClass(obj,cls){
-	if (!this.hasClass(obj, cls)) {
-        obj.className += " " + cls;
-    }
-}
-function removeClass(obj,cls){
-	if (hasClass(obj, cls)) {
-        var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-        obj.className = obj.className.replace(reg, ' ');
-    }
-}
-function hasClass(obj,cls){
-	var objCls = obj.className,
-		objclslst = objCls.split(" ");
-	for(var x in objclslst) {
-		if(objclslst[x] == cls){
-			return true;
-		}
-	}
-	return false;
 }
 /* 显示右侧对应内容*/
 function tabCon(index){
@@ -160,50 +139,4 @@ function getStyle(obj,attr){
 	};
 };
 
-/*购物车点击事件*/
-function shop(){
-	var oUl = document.getElementById("rightNav").getElementsByTagName('ul')[0];
-	var boolen = true;
-	oUl.addEventListener('click',function(e){
-		var oLi = e.target.parentNode;
-		var liName = oLi.className;
-		switch(liName)
-		{
-			case 'shop':
-				shopMove(oLi,boolen)
-				if(boolen == true ){
-					boolen = false
-				}else {
-					boolen = true
-				}
-				break;
-		}
-	},true)
-}
-/* 移动动画*/
-function shopMove(btn,boolen){
-	var winWidth = window.innerWidth;
-	var oDiv = document.getElementById("rightSlide");
-	var oLi7 = oDiv.getElementsByTagName('ul')[0].getElementsByTagName("li")[6];
-	if(boolen){
-		oDiv.style.animation = "shopShow 0.3s";
-		oDiv.style.animationFillMode = "forwards";
-		btn.style.animation = "none";
-		oLi7.style.animation = "none";
-	}else{
-		if(winWidth>=1221){
-			oDiv.style.animation = "shopHidden 0.3s";
-			oDiv.style.animationFillMode = "forwards";
-		}else {
-			oDiv.style.animation = "shopHidden2 0.3s";
-			oDiv.style.animationFillMode = "forwards";
-			setTimeout(function(){
-				btn.style.animation = "block 0.3s";
-				oLi7.style.animation = "block 0.3s";
-				btn.style.animationFillMode = "forwards";
-				oLi7.style.animationFillMode = "forwards";
-			},200)
-		}
-	}
-	
-}
+

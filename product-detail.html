@@ -154,7 +154,7 @@
     		<div class="header-extra">
 				<div id="mallSearch">
 					<div class="mallSearch-input">
-						<input type="text" name="" placeholder="请输入关键字">
+						<input type="text" name="" placeholder="请输入关键字" id="search-input">
 						<button type="submit">搜索</button>
 					</div>
 					<ul class="relKeyTop">
@@ -167,6 +167,10 @@
 						<li><a href="">运动卫衣男</a></li>
 						<li><a href="">连帽卫衣</a></li>
 					</ul>
+                    <div class="search-lenovo">
+                        <ul>
+                        </ul>
+                    </div>
 				</div>
     		</div>
     	</div>
@@ -247,7 +251,7 @@
     						<div class="tm-shopPromotion-title">
     							<dt class="tb-metatit">本店活动</dt>
 	    						<dd>满58元,包邮</dd>
-	    						<a class="more">更多优惠
+	    						<a href="javascript:;" class="more">更多优惠
 	    							<span class="iconfont icon-weibiaoti35"></span>
 	    						</a>
     						</div>
@@ -256,7 +260,7 @@
     								<div class="hd">
     									<em class="title">本店活动</em>
     									全场满58元包邮 到2018-04-18 23:59:59结束
-    									<a href="" class="more">收起
+    									<a href="javascript:;" class="more">收起
     										<span class="iconfont icon-icon--1"></span>
     									</a>  
     								</div>
@@ -299,21 +303,21 @@
     					<dl class="tb-prop clearfix">
     						<dt class="tb-metatit">尺码</dt>
     						<dd>
-    							<ul>
+    							<ul class="tb-prop-ul clearfix">
     								<li class="selected">
-    									<a href="">S</a>
+    									<a href="javascript:;">S</a>
     									<i></i>
     								</li>
     								<li>
-    									<a href="">M</a>
+    									<a href="javascript:;">M</a>
     									<i></i>
     								</li>
     								<li>
-    									<a href="">XL</a>
+    									<a href="javascript:;">XL</a>
     									<i></i>
     								</li>
     								<li>
-    									<a href="">L</a>
+    									<a href="javascript:;">L</a>
     									<i></i>
     								</li>
     							</ul>
@@ -322,9 +326,9 @@
     					<dl class="tb-prop clearfix">
     						<dt class="tb-metatit">主要颜色</dt>
     						<dd>
-    							<ul class="tb-img">
+    							<ul class="tb-img tb-prop-ul clearfix">
     								<li>
-    									<a href="">S</a>
+    									<a href="javascript:;">S</a>
     									<i></i>
     								</li>
     							</ul>
@@ -412,12 +416,12 @@
     			<div id="mainwrap">
     				<div id="J_TabBarBox">
     					<ul id="J_TabBar">
-    						<li class="tm-selected"><a href="">商品详情</a></li>
-    						<li ><a href="">累计评价<em>1111</em></a></li>
+    						<li class="tm-selected"><a href="javascript:;">商品详情</a></li>
+    						<li ><a href="javascript:;">累计评价<em>1111</em></a></li>
     					</ul>
     				</div>
     				<!-- 商品详情 -->
-    				<div class="attributes" >
+    				<div class="attributes mainwrapCon" >
     					<div class="attributes-list">
     						<div class="tm_brandAttr">
     							品牌名称：<b>PLAYBOY/花花公子</b>
@@ -438,7 +442,7 @@
     					</div>
     				</div>
     				<!-- 商品评价 -->
-    				<div class="J_Reviews" style="display: none">
+    				<div class="J_Reviews mainwrapCon" style="display: none">
     					<div class="rate-header">
     						<div class="rate-score">
     							<h4>与描述相符</h4>
@@ -824,5 +828,7 @@
             </div>
         </div>
     </div>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/product-detail.js"></script>
 </body>
 </html>
