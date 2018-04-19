@@ -1,0 +1,489 @@
+
+/*头部导航栏开始*/
+#site-nav {
+    position: relative;
+    width: 100%;
+    height: 34px;
+    background-color: #f2f2f2;
+    border:1px solid #e5e5e5;
+    color: #999;
+}
+.sn-bd {
+    position: relative;
+    width: 1230px;
+    height: 32px;
+    margin: auto;
+    line-height: 32px;
+}
+@media (max-width: 1260px){
+    .sn-bd{
+        width:982px;
+    }
+}
+.sn-bd p {
+    float: left;
+}
+.logo-info a{
+    padding: 0 10px;
+}
+.logo-info a:hover {
+    color: red;
+}
+.sn-bd ul {
+    float: right;
+}
+.sn-bd ul li {
+    position: relative;
+    float: left;
+}
+
+.sn-menu .spacer {
+    overflow: hidden;
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+.sn-menu li a {
+    display: block;
+    position: relative;
+    padding: 0 7px;
+}
+.sn-menu a:hover {
+    color: red;
+}
+.sn-menu i {
+    display: block;
+    height: 32px;
+    position: relative;
+    padding: 0 7px;
+    z-index: 1;
+}
+
+.sn-bd i:hover b{
+    transition: transform .4s;
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+}
+.sn-menu b {
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid dashed dashed;
+    border-color: #bbb transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+.dropdown:hover{
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+}
+.dropdown:hover .dropdown-layer {
+    display: block;
+}
+.dropdown .ddserv{
+    right: 0px;
+    width: 170px;
+    padding: 10px 0;
+}
+.dropdown .ddnav{
+    right: -84px;
+    width: 1188px;
+    padding: 15px 0;
+}
+.dropdown .dropdown-layer {
+    position: absolute;
+    line-height: 24px;
+    border:1px solid#ccc;
+    display: none;
+    z-index: 1;
+    background-color: #fff;
+}
+.dropdown-layer .item-client {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+}
+.dropdown-layer .item-business {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dotted #eee;
+}
+.dropdown-layer .item {
+    display: inline-block;
+    width: 70px;
+    color: #999;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.dropdown dl {
+    float: left;
+    padding-left: 20px;
+}
+.dropdown dl+dl {
+    border-left:1px dashed #eee;
+}
+.dropdown dl dt {
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-left:7px;
+    color: #666;
+}
+.dropdown dl dd {
+    float: left;
+    width: 80px;
+}
+.dropdown .fore1 {
+    width: 340px;
+}
+.dropdown .fore2 {
+    width: 255px;
+}
+.dropdown .fore3 {
+    width: 255px;
+}
+.dropdown .fore4 {
+    width: 255px;
+}
+@media (max-width: 1260px) {
+    .dropdown .ddnav{
+        width: 988px;
+    }
+    .dropdown .fore1 {
+        width: 300px;
+    }
+    .dropdown .fore2 {
+        width: 200px;
+    }
+    .dropdown .fore3 {
+        width: 200px;
+    }
+    .dropdown .fore4 {
+        width: 200px;
+    }
+}
+/*头部导航栏结束*/
+
+/*脚部区域样式开始*/
+    #foot {
+        width: 100%;
+    }
+    #foot .tmall-desc {
+        width: 1190px;
+        padding-top: 22px;
+        height: 190px;
+        margin: auto;
+        border-top: 1px solid #ededed;
+    }
+     #foot .tmall-desc dl {
+        float: left;
+        width: 186px;
+        padding-left: 52px;
+    }
+    #foot .tmall-desc dl dt {
+        color: #646464;
+        font-size: 16px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+    }
+    #foot .tmall-desc dl a {
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        text-align: left;
+        height: 20px;
+        line-height: 20px;
+        color: #8b8b8b;
+        text-decoration: none;
+    }
+    #foot .tmall-copyright {
+        border-top: 2px solid #FF0036;
+        background: #000;
+        text-align: left;
+        height: 30px;
+    }
+    #foot .tmall-copyright .footer-tmallinfo {
+        width: 1190px;
+        margin: 0 auto;
+        line-height: 25px;
+        text-align: center;
+    }
+    .tmall-copyright .footer-tmallinfo p {
+        display: inline-block;
+        color: #fff;
+    }
+    .tmall-copyright .footer-tmallinfo p span {
+        margin: 0 6px;
+    }
+    .tmall-copyright .footer-tmallinfo a {
+        color: #fff;
+        text-decoration: none;
+    }
+    @media (max-width: 1210px) {
+        #foot .tmall-ensure {
+            width: 990px;
+            background:url("../image/TB1I8svRXXXXXcUXpXXXXXXXXXX-990-100.jpg");
+        }
+        #foot .tmall-desc {
+            width: 990px;
+        }
+        #foot .tmall-desc dl {
+            float: left;
+            width: 200px;
+            padding-left: 15px;
+        }
+        #foot .tmall-copyright .footer-tmallinfo {
+            width: 990px;
+        }
+        #mobile {
+            width: 110px!important;
+        }
+    }
+    /* 脚部样式结束*/
+
+    /*头部样式开始*/
+    #header {
+        min-width: 990px;
+        border-bottom: 1px solid #c8baaa;
+        background-color: #ff4401;
+    }
+    #header .head-content {
+        width: 1190px;
+        height:85px;
+        margin: 0 auto;
+    }
+    #mallLogo {
+        float: left;
+        width: 162px;
+        height: 84px;
+        padding-top: 0;
+        line-height: 18px;
+        position: relative;
+        background:url("../image/xiagaologo.png") no-repeat;
+    }
+    #mallLogo .mlogo {
+        padding-right: 7px;
+        width: 100%;
+        height: 100%;
+    }
+    .head-content .shopwt {
+        float: left;
+        height: 50px;
+        margin-top: 24px;
+    }
+    .head-content .shopwt li {
+        float: left;
+        position: relative;
+        height: 50px;
+    }
+    .head-content .shopwt li a {
+        display: block;
+        text-align: center;
+        padding: 0 25px;
+        color: #fff;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+    }
+    .head-content .shopwt b {
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        width: 0;
+        height: 0;
+        border-width: 4px;
+        border-style: solid dashed dashed;
+        border-color: #fff transparent transparent;
+        font-size: 0;
+        line-height: 0;
+    }
+    .head-content .shopwt li:hover b {
+        transition: transform .4s;
+        transform: rotate(180deg);
+        transform-origin: 50% 30%;
+    }
+    .shopwt .J_MtNavSub {
+        position: absolute;
+        cursor: default;
+        z-index: 3;
+        border: 1px solid #e1e1e1;
+        border-top: 0 none;
+        padding: 18px 0;
+        top: 40px;
+        left: -190px;
+        background: #fff;
+        width: 470px;
+        box-shadow: 0 1px 2px #ddd;
+        display: none;
+
+    }
+    .head-content .shopwt li:hover .J_MtNavSub {
+        display: block;
+    }
+    .shopwt .J_MtNavSub .mt-nav-arr {
+        position: absolute;
+        left: 50%;
+        top: -12px;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 6px;
+        border-color: transparent transparent #fff;
+        margin-left: -6px;
+        box-shadow: 0 1px 0 #fff;
+        bottom: 2px;
+    }
+    .shopwt .J_MtNavSub dl{
+        width: 33%;
+        float: left;
+    }
+    .shopwt .J_MtNavSub dt {
+        font-size: 16px;
+        padding-left: 38px;
+        height: 36px;
+        line-height: 36px;
+    }
+    .shopwt .J_MtNavSub .mt-nav-sub-col1 dt{
+        color: #3aac8a;
+    }
+    .shopwt .J_MtNavSub .mt-nav-sub-col2 dt{
+        color: #ea746b;
+    }
+    .shopwt .J_MtNavSub .mt-nav-sub-col3 dt{
+        color: #398ee8;
+    }
+    .shopwt .J_MtNavSub dd p a {
+        display: block;
+        height: 32px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-left: 38px;
+        color: #000;
+        text-align: left;
+    }
+    .shopwt .J_MtNavSub dd p a:hover {
+        color: red;
+    }
+    #mallSearch {
+        width: 597px;
+        float: right;
+        font-size: 12px;
+        padding-top: 15px;
+        position: relative;
+    }
+    #mallSearch .mallSearch-input{
+        height: 30px;
+        background-color: #fff;
+        border: solid #d9d9d9;
+        border-width: 3px 0 3px 3px;
+    }
+    #mallSearch .mallSearch-input input {
+        width: 496px;
+        height: 20px;
+        line-height: 20px;
+        padding: 5px 3px 5px 5px;
+        font-weight: 900;
+        color: #000;
+    }
+    #mallSearch .mallSearch-input button {
+        width: 90px;
+        border: 0;
+        font-size: 16px;
+        letter-spacing: 4px;
+        cursor: pointer;
+        color: #666;
+        background-color: #f5f5f5;
+        height: 30px;
+        overflow: hidden;
+        float: right;
+    }
+    /*搜索框样式*/
+    .search-lenovo {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        border:1px solid#ddd;
+        border-top:none;
+        z-index: 10;
+        display: none;
+        background-color: #fff;
+    }
+    .search-lenovo li {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+    }
+    .search-lenovo li span {
+        float: right;
+        padding-right: 10px;
+        color: #666;
+    }
+    .search-lenovo li a{
+        color: #000;
+    }
+    .search-lenovo li:hover {
+        background-color: red;
+    }
+    .search-lenovo li:hover a,.search-lenovo li:hover span {
+        color: #fff;
+    }
+    /*搜索框样式结束*/
+    #mallSearch .relKeyTop {
+        width: 597px;
+        padding: 4px 0 0;
+        margin-left: -13px;
+        height: 16px;
+        overflow: hidden;
+    }
+    #mallSearch .relKeyTop li {
+        display: inline-block;
+        border-left: 1px solid #ccc;
+        line-height: 16px;
+        padding: 0 12px;
+    }
+    #mallSearch .relKeyTop li:first-child{
+        border-left: none;
+    }
+    #mallSearch .relKeyTop li a {
+        color: #fff;
+        text-decoration:none;
+    }
+    @media(max-width: 1210px) {
+        #header .head-content {
+            width: 990px;
+        }
+        #mallSearch {
+            width: 448px;
+        }
+        #mallSearch .mallSearch-input input {
+            width: 347px;
+        }
+        #mallSearch .relKeyTop {
+            width: 488px;
+        }
+    }
+
+    /*头部样式结束*/
+
+    /*主体内容*/
+    #content {
+        width: 990px;
+        margin: 0px auto;
+        padding-top: 20px;
+    }
+    #content #J_bought_main {
+        margin-left: 120px;
+        min-height: 600px;
+    }

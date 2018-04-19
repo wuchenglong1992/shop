@@ -1,0 +1,940 @@
+body {
+    font-size: 12px;
+}
+/*旺旺在线样式*/
+ a.ww-online {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    background-image:url("../image/wangwang.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+/*头部导航栏开始*/
+#site-nav {
+    position: relative;
+    width: 100%;
+    height: 34px;
+    background-color: #f2f2f2;
+    border:1px solid #e5e5e5;
+    color: #999;
+}
+.sn-bd {
+    position: relative;
+    width: 1230px;
+    height: 32px;
+    margin: auto;
+    line-height: 32px;
+}
+@media (max-width: 1260px){
+    .sn-bd{
+        width:982px;
+    }
+}
+.sn-bd p {
+    float: left;
+}
+.logo-info a{
+    padding: 0 10px;
+}
+.logo-info a:hover {
+    color: red;
+}
+.sn-bd ul {
+    float: right;
+}
+.sn-bd ul li {
+    position: relative;
+    float: left;
+}
+
+.sn-menu .spacer {
+    overflow: hidden;
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+.sn-menu li a {
+    display: block;
+    position: relative;
+    padding: 0 7px;
+}
+.sn-menu a:hover {
+    color: red;
+}
+.sn-menu i {
+    display: block;
+    height: 32px;
+    position: relative;
+    padding: 0 7px;
+    z-index: 1;
+}
+
+.sn-bd i:hover b{
+    transition: transform .4s;
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+}
+.sn-menu b {
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid dashed dashed;
+    border-color: #bbb transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+.dropdown:hover{
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+}
+.dropdown:hover .dropdown-layer {
+    display: block;
+}
+.dropdown .ddserv{
+    right: 0px;
+    width: 170px;
+    padding: 10px 0;
+}
+.dropdown .ddnav{
+    right: -84px;
+    width: 1188px;
+    padding: 15px 0;
+}
+.dropdown .dropdown-layer {
+    position: absolute;
+    line-height: 24px;
+    border:1px solid#ccc;
+    display: none;
+    z-index: 1;
+    background-color: #fff;
+}
+.dropdown-layer .item-client {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+}
+.dropdown-layer .item-business {
+    padding-left: 15px;
+    font-weight: 700;
+    color: #666;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dotted #eee;
+}
+.dropdown-layer .item {
+    display: inline-block;
+    width: 70px;
+    color: #999;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.dropdown dl {
+    float: left;
+    padding-left: 20px;
+}
+.dropdown dl+dl {
+    border-left:1px dashed #eee;
+}
+.dropdown dl dt {
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding-left:7px;
+    color: #666;
+}
+.dropdown dl dd {
+    float: left;
+    width: 80px;
+}
+.dropdown .fore1 {
+    width: 340px;
+}
+.dropdown .fore2 {
+    width: 255px;
+}
+.dropdown .fore3 {
+    width: 255px;
+}
+.dropdown .fore4 {
+    width: 255px;
+}
+@media (max-width: 1260px) {
+    .dropdown .ddnav{
+        width: 988px;
+    }
+    .dropdown .fore1 {
+        width: 300px;
+    }
+    .dropdown .fore2 {
+        width: 200px;
+    }
+    .dropdown .fore3 {
+        width: 200px;
+    }
+    .dropdown .fore4 {
+        width: 200px;
+    }
+}
+/*头部导航栏结束*/
+
+/*脚部区域样式开始*/
+    #foot {
+        width: 100%;
+    }
+    #foot .tmall-ensure {
+        width: 1190px;
+        height: 100px;
+        background:url("../image/TB14dANRXXXXXbdXXXXXXXXXXXX-1190-100.jpg") no-repeat;
+        margin: 25px auto;
+    }
+    #foot .tmall-desc {
+        width: 1190px;
+        padding-top: 22px;
+        height: 190px;
+        margin: auto;
+        border-top: 1px solid #ededed;
+    }
+     #foot .tmall-desc dl {
+        float: left;
+        width: 186px;
+        padding-left: 52px;
+    }
+    #foot .tmall-desc dl dt {
+        color: #646464;
+        font-size: 16px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+    }
+    #foot .tmall-desc dl a {
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        text-align: left;
+        height: 20px;
+        line-height: 20px;
+        color: #8b8b8b;
+        text-decoration: none;
+    }
+    #foot .tmall-copyright {
+        border-top: 2px solid #FF0036;
+        background: #000;
+        text-align: left;
+        height: 30px;
+    }
+    #foot .tmall-copyright .footer-tmallinfo {
+        width: 1190px;
+        margin: 0 auto;
+        line-height: 25px;
+        text-align: center;
+    }
+    .tmall-copyright .footer-tmallinfo p {
+        display: inline-block;
+        color: #fff;
+    }
+    .tmall-copyright .footer-tmallinfo p span {
+        margin: 0 6px;
+    }
+    .tmall-copyright .footer-tmallinfo a {
+        color: #fff;
+        text-decoration: none;
+    }
+    @media (max-width: 1210px) {
+        #foot .tmall-ensure {
+            width: 990px;
+            background:url("../image/TB1I8svRXXXXXcUXpXXXXXXXXXX-990-100.jpg");
+        }
+        #foot .tmall-desc {
+            width: 990px;
+        }
+        #foot .tmall-desc dl {
+            float: left;
+            width: 200px;
+            padding-left: 15px;
+        }
+        #foot .tmall-copyright .footer-tmallinfo {
+            width: 990px;
+        }
+        #mobile {
+            width: 110px!important;
+        }
+    }
+    /* 脚部样式结束*/
+
+    /*头部样式*/
+    #header {
+        height: 122px;
+        min-width: 990px;
+        background-color: #fff;
+        position: relative;
+    }
+    #header .headerLayout {
+        width: 990px;
+        margin: 0 auto;
+    }
+    #header .headerLayout h1 {
+        float: left;
+        width: 400px;
+        height: 84px;
+        padding-top: 28px;
+        position: relative;
+    }
+    #header .header-extra {
+        float: left;
+        width: 590px;
+    }
+        .header-extra .order-stepbar {
+            padding-top: 20px;
+            margin-left: 0;
+            margin-right: -45px;
+            width: 675px;
+            overflow: hidden;
+        }
+        .header-extra .order-stepbar li {
+            float: left;
+            width: 135px;
+            text-align: center;
+        }
+        .header-extra .order-stepbar .step-name {
+            height: 18px;
+            line-height: 18px;
+            padding: 3px 0;
+            font-weight: bold;
+            color: #888;
+        }
+        .header-extra .order-stepbar .step-no {
+            height: 34px;
+            line-height: 34px;
+            font-family: 'arial black';
+            color: #fff;
+            font-size: 18px;
+            background-image: url("../image/T1Usl8FnRfXXcVlxZa-734-340.png");
+            background-repeat: no-repeat;
+            background-position: 50% -102px;
+        }
+        .header-extra .order-stepbar li.step-first .step-no {
+            background-position: 50% -204px;
+        }
+        .header-extra .order-stepbar li.step-last .step-no {
+            background-position: 50% -136px;
+        }
+    /*头部样式结束*/
+
+    /*主体内容区域*/
+
+    #content {
+        width: 990px;
+        margin: 0 auto;
+    }
+    #content .order-address {
+        margin: 30px 0;
+    }
+        .order-address h2 {
+            line-height: 25px;
+            color: #333333;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .order-address .list {
+            width: 1004px;
+        }
+        .order-address .list .addr {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            width: 237px;
+            margin: 0 14px 14px 0;
+            color: #666;
+            cursor: pointer;
+        }
+        .list .addr .inner {
+            position: relative;
+            padding: 15px;
+            background: url("../image/T1VPiBXvpeXXbjLKQ7-237-106.png") no-repeat;
+        }
+        .list .addr-cur .inner {
+            background-image: url("../image/TB1OVRCRpXXXXaMXFXXXXXXXXXX-237-106.png");
+        }
+        .list .addr:hover .inner {
+            background-image: url("../image/TB1OVRCRpXXXXaMXFXXXXXXXXXX-237-106.png");
+        }
+        .list .addr .inner .addr-hd {
+            width: 100%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 0 0 5px;
+            margin-bottom: 5px;
+            line-height: 18px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .list .addr .inner .addr-hd .city {
+            font-weight: bold;
+            max-width: 64px;
+            margin-right: 10px;
+        }
+        .list .addr .inner .addr-bd {
+            height: 36px;
+            overflow: hidden;
+        }
+        .list .addr .inner .addr-toolbar a{
+            color: #c97;
+        }
+        .list .addr .curMarker {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 77px;
+            right: 1px;
+            display: none;
+            background: url("../image/TB1zLJRRpXXXXcrXXXXXXXXXXXX-30-600.png") no-repeat 0 -272px;
+        }
+        .list .addr-cur .curMarker {
+            display: block;
+        }
+        .list .addr .defaultTip {
+            position: absolute;
+            background: #ccc;
+            color: #fff;
+            top: 0;
+            right: 0;
+            line-height: 18px;
+            padding: 0 2px;
+            opacity: 0.7;
+            display: none;
+        }
+        .list .addr-cur .defaultTip {
+            display: block;
+        }
+        .order-address .control {
+            min-height: 25px;
+            color: #666;
+        }
+        .order-address .control a {
+            float: right;
+            color: #c97;
+            line-height: 25px;
+        }
+        .order-address .control .addAddr {
+            padding: 0 10px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            color: #333;
+            height: 25px;
+            font-weight: 700;
+            background-color: #f2f2fe;
+        }
+    #content .order-orderDesc {
+        color: #666;
+    }
+        .order-orderDesc h2 {
+            line-height: 25px;
+            color: #333333;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .order-orderDesc .buy-th {
+            margin-top: 15px;
+            color: #6C6C6C;
+            font-size: 0;
+        }
+        .order-orderDesc .buy-th .buy-td {
+            display: inline-block;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-bottom: 3px solid #b2d1ff;
+            font-size: 12px;
+            margin-left: 1px;
+            vertical-align: bottom;
+        }
+        .order-orderDesc .buy-th .td-0 {
+            width: 255px;
+            margin-left: 0;
+        }
+        .order-orderDesc .buy-th .td-1 {
+            width: 180px;
+        }
+        .order-orderDesc .buy-th .td-2 {
+            width: 120px;
+        }
+        .order-orderDesc .buy-th .td-3 {
+            width: 120px;
+        }
+        .order-orderDesc .buy-th .td-4 {
+            width: 180px;
+        }
+        .order-orderDesc .buy-th .td-5 {
+            width: 130px;
+        }
+    #content .order-order {
+        border-bottom: 1px dotted #80b2ff;
+    }
+        .order-order .order-orderInfo {
+            position: relative;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            border-bottom: 1px dotted #80b2ff;
+            height: 22px;
+        }
+        .order-order .order-orderInfo img {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+            margin-right: 6px;
+            position: relative;
+            top: 1px;
+        }
+        .order-order .order-orderInfo  a {
+            color: #3c3c3c;
+        }
+
+        .order-order .order-item {
+            border-bottom: 1px dotted #ddd;
+            background-color: #fbfcff;
+        }
+        .order-order .order-item .order-itemInfo {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .order-item .info-detail {
+            width: 245px;
+            padding: 10px 0px 10px 10px;
+        }
+        .order-item .info-cell {
+            display: inline-block;
+            margin-right: 1px;
+        }
+        .order-itemInfo .info-img {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+        .order-itemInfo .info-img img {
+            width: 100%;
+            height: 100%;
+        }
+        .order-itemInfo .info-msg {
+            padding-left: 7px;
+            vertical-align: top;
+        }
+        .order-itemInfo .info-title {
+            width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            height: 18px;
+            line-height: 18px;
+        }
+        .order-itemInfo .info-icon-list {
+            width: 180px;
+            height: 19px;
+            line-height: 19px;
+        }
+        .order-itemInfo .info-icon-list a {
+            height: 16px;
+            margin-right: 4px;
+        }
+        .order-itemInfo .info-icon-list a img {
+            vertical-align: middle;
+            height: 16px;
+        }
+        .order-itemInfo .info-sku {
+            color: #6c6c6c;
+            width: 180px;
+            vertical-align: top;
+            padding: 10px 0;
+        }
+        .order-itemInfo .info-sku p {
+            height: 18px;
+            line-height: 18px;
+        }
+        .order-itemInfo .info-price {
+            color: #3c3c3c;
+            vertical-align: top;
+            width: 120px;
+            text-align: center;
+            padding: 10px 0;
+            height: 38px;
+        }
+        .order-item .order-quantity {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 120px;
+            padding: 10px 0;
+            margin-right: 1px;
+        }
+        .order-item .order-promotion {
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 180px;
+            padding: 10px 0;
+            margin-right: 1px;
+        }
+        .order-item .order-itemPay {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 0;
+            text-align: right;
+            width: 100px;
+            color: #ff0036;
+            font-weight: 700;
+            padding-right: 10px;
+        }
+        .order-order .order-orderExt {
+            background-color: #f2f7ff;
+            border-bottom: 1px solid #fff;
+        }
+        .order-orderExt .order-extUser {
+            display: inline-block;
+            width: 425px;
+            vertical-align: top;
+        }
+        .order-extUser .order-memo {
+            position: relative;
+            padding: 10px;
+            border-top: 1px solid #fff;
+        }
+        .order-extUser .order-memo .memo-name {
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .order-extUser .order-memo .memo-input {
+            vertical-align: top;
+            width: 326px;
+            resize: none;
+            height: 18px;
+            line-height: 18px;
+            text-indent: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .order-orderExt .order-extInfo {
+            display: inline-block;
+            width: 560px;
+            vertical-align: top;
+            margin-left: -1px;
+            border-left: 1px solid #fff;
+        }
+        .order-extInfo .order-promotion {
+            padding: 10px 0;
+            border-top: 1px solid#fff;
+        }
+        .shop-promotion-title {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            width: 95px;
+            padding-right: 15px;
+            height: 18px;
+            line-height: 18px;
+        }
+        .shop-promotion-selecter {
+            display: inline-block;
+            vertical-align: top;
+            width: 324px;
+            height: 18px;
+            line-height: 18px;
+        }
+        .order-promotion .shop-promotion-selecter select {
+           -webkit-appearance: menulist-button;
+            outline: 0;
+            min-width: 106px;
+            border: 1px solid#a9a9a9;
+            font-size: 12px;
+        }
+        .order-promotion .shop-promotion-selecter select.ins-select {
+            min-width: 160px;
+        }
+        .order-promotion .shop-promotion-selecter .ins-checkbox {
+            vertical-align: middle;
+        }
+        .order-promotion .shop-promotion-selecter .trigger {
+            background: #36ab67;
+            color: #fff;
+            padding: 1px;
+        }
+        .order-promotion .shop-promotion-discount {
+            display: inline-block;
+            vertical-align: top;
+            width: 108px;
+            padding-right: 10px;
+            text-align: right;
+            font: 700 12px;
+        }
+        .order-promotion .select-price {
+            color: #ff0036;
+        }
+        .order-order .orderPay {
+            background-color: #f2f7ff;
+            padding: 3px 0;
+            text-align: right;
+            padding-right: 10px;
+            color: #333;
+            height: 45px;
+            line-height: 45px;
+        }
+        .orderPay .price {
+            color: #ff0036;
+            font-family: verdana,arial;
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: bolder;
+            vertical-align: middle;
+        }
+    #content .order-payInfo {
+        text-align: right;
+        margin-top: 15px;
+    }
+        .order-payInfo .payInfo-wrapper {
+            display: inline-block;
+            border: 1px solid #ff0036;
+        }
+        .order-payInfo .payInfo-wrapper .payInfo-shadow {
+            border: 3px solid #fff0e8;
+            min-width: 230px;
+            padding: 10px 10px 10px 20px;
+        }
+        .payInfo-wrapper .payInfo-shadow .realPay-title {
+            font-weight: 700;
+            color: #333;
+        }
+        .payInfo-wrapper .payInfo-shadow .order-price {
+            font-size: 26px;
+            margin-right: 4px;
+            color: #999;
+        }
+        .payInfo-wrapper .payInfo-shadow .realPay-price {
+            color: #ff0036;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        .payInfo-wrapper .payInfo-shadow .order-confirmAddr {
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+    #content .order-submitOrder {
+        text-align: right;
+        margin-top: -1px;
+    }
+        .order-submitOrder a {
+            display: inline-block;
+            width: 182px;
+            height: 39px;
+            position: relative;
+            vertical-align: middle;
+            line-height: 39px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            background: #ff0036;
+            color: #fff;
+        }
+    /*创建地址*/
+    .tc-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 10px solid #b4b4b4;
+        background: #fff;
+        width: 861px;
+        height: 521px;
+        z-index: 3;
+        display: none;
+    }
+    .tc-popup .tc-popup-header,
+    .tc-Management .tc-popup-header{
+        background: #e6e6e6;
+        border-bottom: 1px solid #d9d9d9;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .tc-popup .tc-popup-hide,
+    .tc-Management .tc-popup-hide{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        line-height: 14px;
+        top: 8px;
+        right: 8px;
+        font-weight: 700;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .tc-popup .tc-popup-hide:hover {
+        background-color: #666;
+        color: #fff;
+    }
+    .tc-popup .tc-popup-content {
+        padding: 30px 0 10px;
+    }
+        .tc-popup-content .item {
+            padding-left: 20px;
+            padding-bottom: 10px;
+            line-height: 26px;
+            overflow: hidden;
+        }
+        .tc-popup-content .item .item-label {
+            display: inline;
+            float: left;
+            width: 100px;
+            text-align: right;
+            height: 26px;
+            line-height: 26px;
+            margin-right: 6px;
+        }
+        .tc-popup-content .item .item-label span {
+            color: #fc6210;
+        }
+        .tc-popup-content .item .item-content {
+            float: left;
+        }
+        .item .address {
+            border: 1px solid #ccc;
+            font-size: 12px;
+            padding: 4px 8px;
+            outline: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        .item .address .add-con {
+            width: 272px;
+            height: 19px;
+            line-height: 19px;
+            margin-right: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #ccc;
+        }
+        .item .address .iconfont {
+           position: absolute;
+           right: 4px;
+           top: 0; 
+        }
+        .item .ks-combobox-input {
+            display: block;
+            margin: 0;
+            padding: 3px;
+            width: 392px;
+            height: 62px;
+            border: 1px solid #afafaf;
+            font-size: 12px;
+        }
+        .item .i-text {
+            border: 1px solid #afafaf;
+            padding: 3px;
+            width: 200px;
+            height: 18px;
+            line-height: 18px;
+            vertical-align: middle;
+            font-size: 12px;
+        }
+        .item input.i-text-short {
+            width: 65px;
+        }
+        .item #J_SetDefault {
+            vertical-align: middle;
+        }
+        .item .btn {
+            height: 25px;
+            border: 1px solid #ccc;
+            outline: 0;
+            border-radius: 2px;
+            padding: 0 15px;
+            margin-right: 10px;
+            color: #333;
+            cursor: pointer;
+            background-color: #fff;
+        }
+    /*管理地址*/
+    .tc-Management {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 10px solid #b4b4b4;
+        background: #fff;
+        width: 861px;
+        height: 521px;
+        z-index: 3;
+        display: none;
+    }
+        .tc-Management table {
+            width: 800px;
+            margin: 20px auto;
+            border: 1px solid #e7e7e7;
+        }
+        .tc-Management table tr {
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .tc-Management table tr th {
+            height: 40px;
+            padding: 0 5px;
+            border-top: 1px solid #e7e7e7;
+            border-bottom: 1px solid #e7e7e7;
+            background: #f2f2f2;
+            text-align: left;
+            color:#000;
+            font-weight: 700;
+        }
+        .tc-Management table tr td {
+            white-space: normal;
+            word-wrap: break-word;
+            word-break: break-all;
+            position: relative;
+            padding: 5px;
+            height: 48px;
+        }
+        .tc-Management table tr:hover{
+            background-color: #eee;
+        }
+        .tc-Management .note {
+            display: inline-block;
+            border: 1px solid#f30;
+            color: #f30;
+            padding: 2px 5px;
+            border-radius: 3px;
+            height: 23px;
+            line-height: 23px;
+            background: rgb(255, 214, 204);
+        }
+        .tc-Management .note1 {
+            display: inline-block;
+            background-color: #f60;
+            color: #fff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            height: 23px;
+            line-height: 23px;
+        }
+    /*遮罩层*/
+    .mask {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.6);
+        z-index: 2;
+        display: none;
+    }
