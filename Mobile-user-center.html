@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>小龙虾个人中心</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" type="img/x-ico" href="./image/logoico.png">
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<style>
+		.mui-content {
+			position: fixed;
+			top: 0;
+			bottom:50px;
+			width: 100%;
+			background: #DDDDDD;
+			z-index: 1;
+			overflow: hidden;
+		}
+		
+		.box {
+			position: relative;
+			left: -18%;
+			right: 0;
+			z-index: 2;
+			height: 100px;
+			width: 140%;
+			border-radius: 0% 0% 100% 100%;
+			background-color: #27ae60;
+		}
+		
+		.header {
+			position: fixed;
+			right: 0;
+			left: 0;
+			height: 44px;
+			z-index: 10;
+			top: 14px;
+			text-align: center;
+		}
+		
+		.header2 {
+			position: fixed;
+			right: 10px;
+			height: 44px;
+			z-index: 10;
+			top: 14px;
+			color: white;
+		}
+		
+		.header img {
+			width: 50px;
+			height: 50px;
+			border-radius: 100%;
+		}
+		
+		.header p {
+			color: white;
+		}
+		
+		.mui-badge {
+			background: none;
+		}
+		
+		.mui-media .mui-media-body {
+			margin-top: 14px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		
+		.mui-btn {
+			display: block;
+			width: 80%;
+			margin: 40px auto;
+		}
+		
+		.mui-scroll .gerenzhongxin_ul,
+		.mui-scroll .gerenzhongxin_ul2 {
+			margin-bottom: 4px;
+		}
+		
+		.mui-scroll .gerenzhongxin_ul img,
+		.mui-scroll .gerenzhongxin_ul2 img {
+			height: 18px;
+			padding: 0px;
+			margin-top: 14px
+		}
+	</style>
+</head>
+<body>
+	<!-- 底部样式 -->
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active" href="Mobile-index.html">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">商城</span>
+	    </a>
+	    <a class="mui-tab-item" href="Mobile-order.html">
+	        <span class="mui-icon mui-icon-phone"></span>
+	        <span class="mui-tab-label">订单</span>
+	    </a>
+	    <a class="mui-tab-item" href="#">
+	        <span class="mui-icon mui-icon-gear"></span>
+	        <span class="mui-tab-label">个人中心</span>
+	    </a>
+	</nav>
+	<div class="mui-content">
+		<div id="scroll" class="mui-scroll-wrapper scroll">
+			<div class="mui-scroll">
+				<div class="box"></div>
+				<div class="header" id="head">
+					<img id="headimg" src="image/logo.png" />
+					<p>未认证</p>
+				</div>
+				<div class="header2">
+					<span class="mui-icon mui-icon-info"></span>
+				</div>
+				<ul class="mui-table-view mui-table-view-chevron gerenzhongxin_ul">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right" href="../examples/gerenxinxi.html">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/26.png">
+							<div class="mui-media-body">
+								个人信息
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron gerenzhongxin_ul">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right" href="../examples/wodedingdan.html">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/30.png">
+							<div class="mui-media-body">
+								购买订单
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class='mui-navigate-right' href="">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/31.png">
+							<div class="mui-media-body">
+								收货地址
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron gerenzhongxin_ul">
+					<li class="mui-table-view-cell mui-media">
+						<a class="mui-navigate-right" href="">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/32.png">
+							<div class="mui-media-body">
+								使用说明
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class='mui-navigate-right' href="">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/33.png">
+							<div class="mui-media-body">
+								意见反馈
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a class='mui-navigate-right' href="">
+							<img class="mui-media-object mui-pull-left" src="image/mobile/34.png">
+							<div class="mui-media-body">
+								关于我们
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view mui-table-view-chevron gerenzhongxin_ul2">
+					<li class="mui-table-view-cell mui-media kefu" >
+						<a class="mui-navigate-right" href="">
+							<span class="mui-badge">13955554444</span>
+							<img class="mui-media-object mui-pull-left" src="image/mobile/35.png">
+							<div class="mui-media-body">
+								服务商客服
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media kefu" >
+						<a class='mui-navigate-right' href="">
+							<span class="mui-badge">13955555555</span>
+							<img class="mui-media-object mui-pull-left" src="image/mobile/36.png">
+							<div class="mui-media-body">
+								官方电话
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media qqkefu">
+						<a class='mui-navigate-right' href="">
+							<span class="mui-badge">点击跳转QQ</span>
+							<img class="mui-media-object mui-pull-left" src="image/mobile/37.png">
+							<div class="mui-media-body">
+								客服QQ
+							</div>
+						</a>
+					</li>
+				</ul>
+				<button type="button" class="mui-btn mui-btn-danger">退出登录</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			//阻尼系数
+			var deceleration = mui.os.ios ? 0.003 : 0.0009;
+			$('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration: deceleration
+			});
+		})(mui)
+	</script>
+</body>
+</html>

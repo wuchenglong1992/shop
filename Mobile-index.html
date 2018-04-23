@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>小龙虾购物商场</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" type="img/x-ico" href="./image/logoico.png">
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link href="css/icons-extra.css" rel="stylesheet"/>
+	<style>
+		#pullrefresh .mui-slider{
+			top: 40px;
+		}
+		#slider {
+			height: 250px;
+		}
+		#scroll {
+			background: #DDDDDD;
+		}
+		
+		.shop_ul {}
+		
+		.shop_list {
+			background: white;
+			padding: 0 4px;
+			height: 100%;
+			margin: 0;
+		}
+		
+		.shop_list li {
+			background: white;
+			padding: 4px 2px;
+			list-style: none;
+		}
+		
+		.shop_list p {
+			color: #999999;
+		}
+		
+		.shop_list label {
+			color: red;
+			font-size: 18px;
+		}
+		
+		.shop_list span {
+			border: 1px solid red;
+			border-radius: 4px;
+		}
+		.shop_list img {
+			display:block;
+			margin:0 auto;
+			height: 120px;
+			max-width: 100%;
+		}
+		.mui-table-view {
+			margin-top: 10px;
+		}
+		
+		.header_lunbo img {
+			height: 250px;
+		}
+		
+		#Gallery .mui-media-body {
+			font-size: 14px;
+		}
+		#Gallery .jiugongge img{
+			height: 30px;
+		}
+		#Gallery .mui-grid-9 .showli {
+			display: none;
+		}
+		.mui-bar-nav .mui-search {
+			position: absolute;
+			top: 2px;
+			left: 100px;
+			width: 56%;
+		}
+		.mui-bar-nav .mui-pull-right {
+			position: absolute;
+			top: 8px;
+			right: 14px;
+		}
+		#product {
+			margin-top: 40px;
+			padding-bottom: 55px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<label id="output" class="cities">定位中</label><span class="mui-icon mui-icon-arrowdown cities"></span>
+		<div class="mui-input-row mui-search"><input type="search" class="mui-input-clear" placeholder="点击输入商品"></div>
+		<div class="gouwuche">
+			<a class="mui-pull-right" href="Mobile-shop.html">
+				<span class="mui-icon-extra mui-icon-extra-cart"></span>
+			</a>
+		</div>
+	</header>
+	<div class="mui-content" id="pullrefresh">
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div id="slider" class="mui-slider header_lunbo">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="image/20.jpg">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="image/18.jpg">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="image/19.jpg">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="image/20.jpg">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="image/18.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<div id="Gallery" class="mui-slider">
+					<ul class="mui-table-view mui-grid-view mui-grid-9">
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="#">
+								<span class="mui-icon "><img src="image/1.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="#">
+								<span class="mui-icon"><img src="image/2.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="wanjiadian.html">
+								<span class="mui-icon"><img src="image/3.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="dianpuxiangqing.html">
+								<span class="mui-icon"><img src="image/4.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="shoukuan.html">
+								<span class="mui-icon"><img src="image/5.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="#">
+								<span class="mui-icon"><img src="image/6.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 jiugongge">
+							<a href="#">
+								<span class="mui-icon"><img src="image/7.webp"></span>
+								<div class="mui-media-body">某某品牌</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3" id="showMore">
+							<a href="#">
+								<span class="mui-icon mui-icon-arrowdown"></span>
+								<div class="mui-media-body">更多</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="product">
+					<div class="mui-table-view">
+						<div class="mui-table-view-cell shop_ul">
+							<a href="Mobile-search.html" class="mui-navigate-right">
+								<span class="mui-badge">更多</span>
+								<div class="mui-media-body">
+									护肤化妆
+								</div>
+							</a>
+						</div>
+						<ul class="mui-row shop_list">
+							<li class="mui-col-xs-6">
+								<img src="image/TB1koD.ir1YBuNjSszhSuwUsFXa.jpg_490x490q100.jpg_.webp"/>
+								<p>聚名品 LUXURY CHANNEL</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+							<li class="mui-col-xs-6">
+								<img src="image/TB2FnLhgjlxYKJjSZFuXXaYlVXa_!!2924318589.jpg_490x490q100.jpg_.webp"/>
+								<p>聚名品 LUXURY CHANNEL</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-table-view">
+						<div class="mui-table-view-cell shop_ul">
+							<a href="Mobile-search.html" class="mui-navigate-right">
+								<span class="mui-badge">更多</span>
+								<div class="mui-media-body">
+									护肤化妆
+								</div>
+							</a>
+						</div>
+						<ul class="mui-row shop_list">
+							<li class="mui-col-xs-6">
+								<img src="image/xiezi.SS2"/>
+								<p>夏季透气网面鞋男飞线袜子韩版潮鞋学生鞋</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+							<li class="mui-col-xs-6">
+								<img src="image/24.jpg"/>
+								<p>Apple/苹果iPhone 8 Plus 64G全网通</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-table-view">
+						<div class="mui-table-view-cell shop_ul">
+							<a href="Mobile-search.html" class="mui-navigate-right">
+								<span class="mui-badge">更多</span>
+								<div class="mui-media-body">
+									儿童玩具
+								</div>
+							</a>
+						</div>
+						<ul class="mui-row shop_list">
+							<li class="mui-col-xs-6">
+								<img src="image/product02.jpg"/>
+								<p>雪花秀顶顶顶顶顶顶顶顶地对地导弹</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+							<li class="mui-col-xs-6">
+								<img src="image/product03.jpg"/>
+								<p>雪花秀顶顶顶顶顶顶顶顶地对地导弹</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+							<li class="mui-col-xs-6">
+								<img src="image/product04.jpg"/>
+								<p>雪花秀顶顶顶顶顶顶顶顶地对地导弹</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+							<li class="mui-col-xs-6">
+								<img src="image/product05.jpg"/>
+								<p>雪花秀顶顶顶顶顶顶顶顶地对地导弹</p>
+								<label><span>自营</span>￥ 8888.00</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部样式 -->
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active" href="#">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">商城</span>
+	    </a>
+	    <a class="mui-tab-item" href="Mobile-order.html">
+	        <span class="mui-icon mui-icon-phone"></span>
+	        <span class="mui-tab-label">订单</span>
+	    </a>
+	    <a class="mui-tab-item" href="Mobile-user-center.html">
+	        <span class="mui-icon mui-icon-gear"></span>
+	        <span class="mui-tab-label">个人中心</span>
+	    </a>
+	</nav>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($){
+			var deceleration = mui.os.ios ? 0.003 : 0.0009;
+			mui('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration: deceleration
+			});
+			//产品列表更多选项点击跳转事件
+			$('.shop_ul').on('tap','a',function(){
+				var targetTab = this.getAttribute('href');
+				$.openWindow({
+						url: targetTab,
+						id: targetTab,
+						show: {
+							duration: 300
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							title: '正在加载...'
+						}
+					})
+			});
+			//商品点击跳转事件
+			$('.shop_list').on('tap','li',function(){
+				$.openWindow({
+						url: 'Mobile-product-detail.html',
+						id: 'Mobile-product-detail.html',
+						show: {
+							duration: 300
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							title: '正在加载...'
+						}
+					})
+			});
+		})(mui);
+	</script>
+</body>
+</html>

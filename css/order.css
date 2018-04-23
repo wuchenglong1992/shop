@@ -487,6 +487,298 @@
         padding-top: 20px;
     }
     #content #J_bought_main {
-        margin-left: 120px;
         min-height: 600px;
+    }
+    #J_bought_main .tabs {
+        font-size: 16px;
+        margin: 22px 0;
+    }
+    #J_bought_main .tabs .tabs-ul li {
+        float: left;
+        padding: 0 0 12px 20px;
+        font-weight: 700;
+        border-bottom: 2px solid #e8e8e8;
+    }
+    #J_bought_main .tabs .tabs-ul li.active {
+       border-bottom: 2px solid#ff6000;
+    }
+    #J_bought_main .tabs .tabs-ul li a {  
+        color: #000;
+    }
+    #J_bought_main .tabs .tabs-ul li a:hover,
+    #J_bought_main .tabs .tabs-ul li.active a{
+        color:#ff6000;
+    }
+    #J_bought_main .tabs .tabs-ul li a span {
+        padding-left:20px;
+    }
+    #J_bought_main .tabs-table {
+        width: 100%;
+        background-color: #f5f5f5;
+        border: 1px solid #e8e8e8;
+    }
+    #J_bought_main .tabs-table li {
+        float: left;
+        height: 29px;
+        line-height: 29px;
+        text-align: center;
+        padding: 5px 0;
+    }
+    #J_bought_main .tabs-table .baby{
+        width: 38%;
+    }
+    #J_bought_main .tabs-table .price {
+        width: 10%;
+    }
+    #J_bought_main .tabs-table .number {
+        width: 4%;
+    }
+    #J_bought_main .tabs-table .com-operation,
+    #J_bought_main .tabs-table .payment,
+    #J_bought_main .tabs-table .state,
+    #J_bought_main .tabs-table .tra-operation {
+        width: 12%;
+    }
+    #J_bought_main .order-btn {
+        text-align: right;
+        margin:10px 0;
+    }
+    #J_bought_main .order-btn a:hover{
+        border-color: #f40;
+        color: #f40;
+    }
+    #J_bought_main .order-btn a {
+        display: inline-block;
+        height: 24px;
+        line-height: 22px;
+        background-color: #fff;
+        border: 1px solid #dcdcdc;
+        color: #3c3c3c;
+        padding: 0 12px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    #J_bought_main .order-content .index-order{
+        margin: 10px 0;
+    }
+    #J_bought_main .order-content .order-header {
+        background-color: #f1f1f1;
+    }
+    #J_bought_main .order-content .order-header li {
+        float: left;
+        padding: 10px 0;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+    }
+    #J_bought_main .order-content .header-body{
+        width: 38%;
+    }
+    #J_bought_main .order-content .header-body .order-time {
+        font-weight: 700;
+        margin-left: 20px;
+        margin-right:10px;
+    }
+    #J_bought_main .order-content .header-store{
+        width: 14%;
+        text-align: center;
+    }
+    #J_bought_main .order-content .header-store img {
+        display: inline-block;
+        width: 16px;
+        margin-right: 3px;
+        vertical-align: middle;
+    }
+    #J_bought_main .order-content .header-store a {
+        display: inline-block;
+        color: #3c3c3c;
+        vertical-align: middle;
+    }
+    #J_bought_main .order-content .header-contact{
+        width: 12%;
+        text-align: center;
+    }
+    #J_bought_main .order-content .header-contact a {
+        display: inline-block;
+        width: 67px;
+        height: 20px;
+
+        vertical-align: top;
+        background:url(../image/T15AD7FFFaXXbJnvQ_-130-60.gif) no-repeat 0 0;
+    }
+    #J_bought_main .order-content .header-ico{
+        width: 34%;
+        text-align: right;
+        padding-right: 2%;
+    }
+    #J_bought_main .order-content .index-order-content {
+        width: 100%;
+
+    }
+    .order-content .order-baby p {
+        padding: 8px 0 0 0;
+        line-height: 16px;
+        text-align: left;
+        font-size: 12px;
+    }
+    .order-content .order-baby .baby-img {
+        float: left;
+        width: 80px;
+        margin-left: 20px;
+    }
+    .order-content .order-baby .baby-img img {
+        max-width: 100%;
+    }
+    .order-content .order-baby .baby-content {
+        float: left;
+        width: 260px;
+        margin-left: 10px;
+    }
+    .order-content .index-order-content th {
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ececec;
+        height: 98px;
+        padding: 10px 0;
+    }
+    .order-content .index-order-content th a {
+        color: #3c3c3c;
+    }
+    .order-content .index-order-content th a:hover {
+        color: #f40;
+    }
+    .order-content .index-order-content th.order-baby {
+        width: 38%;
+        border-right:none;
+    }
+    .order-content .index-order-content th.order-price {
+        width: 10%;
+        border-left: none;
+        border-right:none;
+    }
+    .order-content .index-order-content th.order-number {
+        width: 4%;
+        border-left: none;
+        border-right:none;
+    }
+    .order-content .index-order-content th.order-com-operation {
+        width: 12%;
+        border-left: none;
+    }
+    .order-content .index-order-content th.order-payment {
+        width: 12%;
+    }
+    .order-content .index-order-content th.order-payment p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+    .order-content .index-order-content th.order-state {
+        width: 12%;
+    }
+    .order-content .index-order-content th.order-tra-operation {
+        width: 12%;
+    }
+    .order-content .index-order-content th.order-state p,
+    .order-content .index-order-content th.order-tra-operation p {
+        margin-top: 8px;
+        margin-bottom: 3px;
+        line-height: 1;
+    }
+    /*主体内容结束*/
+
+    /*订单详情弹窗*/
+    #J_TabView {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 950px;
+        transform: translate(-50%,-50%);
+        z-index: 999;
+        display: none;
+    }
+    #J_TabView .close-window {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        border:1px solid#fff;
+    }
+    #J_TabView .close-window:hover {
+        color: #f40;
+        border-color: #f40;
+    }
+    #J_TabView .tabs-nav {
+        position: absolute;
+        top: -6px;
+        left: 20px;
+        z-index: 50;
+        background-color: #fff;
+    }
+    #J_TabView .tabs-nav li {
+        display: inline;
+        float: left;
+        width: 130px;
+        height: 27px;
+        padding-top: 8px;
+        line-height: 21px;
+        text-align: center;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: #AEC7E5;
+    }
+    #J_TabView .tabs-nav li a {
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+    }
+    #J_TabView .tabs-panels {
+        position: relative;
+        top: 29px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        padding: 10px 20px;
+        border: 1px solid #AEC7E5;
+        font-size: 12px;
+        background-color: #fff;
+    }
+    #J_TabView .tabs-panels a.on-line {
+        display: inline-block;
+        width: 67px;
+        height: 20px;
+        background:url("../image/T15AD7FFFaXXbJnvQ_-130-60.gif") no-repeat;
+    }
+    #J_TabView .tabs-panels .addr_and_note span {
+        display: inline-block;
+        width: 78px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    #J_TabView .tabs-panels hr {
+        margin: 10px 0 5px;
+    }
+    #J_TabView .tabs-panels dl {
+        margin-left: 50px;
+        width: 860px;
+        overflow: hidden;
+        line-height: 30px;
+    }
+    #J_TabView .tabs-panels dt {
+        display: inline;
+        float: left;
+        width: 85px;
+        text-align: right;
+    }
+    #J_TabView .tabs-panels dd {
+        display: inline;
+        float: left;
+        width: 200px;
+        min-height: 30px;
     }

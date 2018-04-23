@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>小龙虾订单详情</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" type="img/x-ico" href="image/logoico.png">
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<style>
+		.mui-content {
+			background: #D8D8D8;
+		}
+		
+		.xinxi {
+			background: white;
+			padding: 14px 10px 0 10px;
+			color: #222222;
+			line-height: 26px;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+		
+		.shouhuodizhi {
+			line-height: 30px;
+			padding: 10px;
+			border-bottom: 2px solid#929292;
+			background: white;
+		}
+		
+		.shouhuodizhi p {
+			color: #222222;
+		}
+		
+		.shouhuodizhi label span {
+			margin-left: 40px;
+		}
+		
+		.shouhuodizhi span {
+			margin-top: 6px;
+		}
+		
+		.shouhuodizhi .mui-media-body {
+			padding: 10px;
+		}
+		.mui-row {
+			padding: 10px;
+			background: white;
+			border-bottom: 1px solid#CCCCCC;
+		}
+		.mui-row img {
+			height: 60px;
+			padding: 2px;
+		}
+		
+		 .mui-col-xs-5,
+		 .mui-col-xs-3 {
+			padding: 2px;
+			line-height: 26px;
+		}
+		
+		 .mui-col-xs-3 {
+			text-align: right;
+		}
+		footer {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: 10;
+			height: 50px;
+			text-align: center;
+			border-top: 1px solid #CCCCCC;
+			font-size: 14px;
+			background: white;
+			line-height: 34px;
+		}
+		footer #quxiao ,footer #zhifu {
+			width: 49.9%;
+			height: 100%;
+			background: #CF2D28;
+			color: white;
+			font-size: 18px;
+			line-height: 50px;
+		}
+		footer #quxiao {
+			float: left;
+		}
+		footer #zhifu {
+			float: right;
+		}
+		footer #weiquxiao {
+			display: none;
+		}
+		footer #yiquxiao {
+			display: block;
+			width: 100;
+			height: 100%;
+			background: #666;
+			color: white;
+			font-size: 18px;
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">订单详情</h1>
+	</header>
+	<footer>
+		<div id="weiquxiao">
+			<div id="quxiao">
+				取消订单
+			</div>
+			<div id="zhifu">去支付</div>
+		</div>
+		<div id="yiquxiao">
+			订单已完成
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div class="xinxi">
+			<div class="dingdanhao">订单号:DD2018113017370679845273</div>
+			<div class="shijian">下单时间:2018-11-30 17:37:06</div>
+			<div class="zhuangtai">订单状态:已完成</div>
+			<div class="jine">订单金额:￥50.00</div>
+			<div class="youfei">订单邮费:￥0.00</div>
+		</div>
+		<div class="shouhuodizhi">
+			<label>收货人：张三 <span>18266552154</span></label>
+			<p>收货地址:<span>手机充值服务</span></p>
+		</div>
+		<div class="mui-row">
+			<div class="mui-col-xs-3"><img src="image/TB1_BY7NpXXXXX5XXXXXXXXXXXX_!!0-item_pic.jpg_80x80.jpg"></div>
+			<div class="mui-col-xs-1"></div>
+			<div class="mui-col-xs-5">
+				<label>中国移动话费<p>50元</p></label>
+			</div>
+			<div class="mui-col-xs-3">
+				<label>￥50.00<p>×1件</p></label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

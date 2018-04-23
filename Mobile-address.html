@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>小龙虾收货地址</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" type="img/x-ico" href="image/logoico.png">
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link href="css/mui.picker.css" rel="stylesheet" />
+	<link href="css/mui.poppicker.css" rel="stylesheet" />
+	<style>
+		footer {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: 10;
+			height: 50px;
+			text-align: center;
+			border-top: 1px solid #CCCCCC;
+			font-size: 14px;
+			background: white;
+			line-height: 34px;
+		}
+		
+		footer label {
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+		}
+		
+		footer span {
+			margin-right: 4px;
+		}
+		
+		.mui-content {
+			position: fixed;
+			width: 100%;
+			background: #D8D8D8;
+			z-index: 1;
+			overflow: hidden;
+		}
+		
+		.mui-scroll-wrapper {
+			top: 44px;
+		}
+		
+		#picture {
+			background: #CCCCCC;
+		}
+		
+		#picture .picture_header {
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			font-size: 18px;
+		}
+		
+		#picture .picture_header a {
+			float: right;
+			margin: 6px 6px 0 0;
+		}
+		
+		#picture .picture_form {
+			background: white;
+			padding: 10px;
+		}
+		
+		#picture .picture_content {
+			border-bottom: 1px solid#CCCCCC;
+			margin: 0 10px;
+			line-height: 40px;
+			font-size: 14px;
+			text-align: center;
+		}
+		
+		#picture .picture_content button {
+			border: none;
+			height: 40px;
+			padding: 0;
+			text-align: left;
+			padding-left: 14px;
+		}
+		
+		#picture input[type=text] {
+			margin: 0px;
+			border: none;
+			height: 40px;
+		}
+		
+		#picture .picture_button {
+			padding: 10px;
+		}
+		
+		#picture .picture_button button {
+			height: 40px;
+			width: 100%;
+		}
+		#mui-table-view li {
+			border: 1px solid #CCCCCC;
+		}		
+		#mui-table-view span {
+			margin: 50% 0;
+		}	
+		.mui-radio.mui-left span {
+			margin-right: 10px;
+		}
+		.mui-radio input[type=radio]{
+			top:20%;
+		}
+		.mui-radio.mui-left input[type=radio]{
+			left: 0px;
+		}
+		.mui-radio.mui-left label{
+			padding-left: 34px;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">收货地址</h1>
+	</header>
+	<a href="#picture">
+		<footer>
+			<label><span class="mui-icon mui-icon-plusempty"></span>新增地址</label>
+		</footer>
+	</a>
+	<div class="mui-content" id="mui-content">
+		<div id="scroll" class="mui-scroll-wrapper scroll">
+			<div class="mui-scroll">
+				<ul class="mui-table-view" id="mui-table-view">
+					<li class="mui-table-view-cell mui-row">
+						<div class="mui-col-xs-11">
+							<div class="mui-radio mui-left">
+								<input name="radio1" type="radio" checked="">
+								<label><span>张三</span>18555422168<p>浙江省金华市义乌市北苑街道创业园</p></label>
+							</div>
+						</div>
+						<div class="mui-col-xs-1">
+							<span class="mui-icon mui-icon-trash"></span>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-row">
+						<div class="mui-col-xs-11">
+							<div class="mui-radio mui-left">
+								<input name="radio1" type="radio">
+								<label><span>张三</span>18555422168<p>浙江省金华市义乌市北苑街道创业园</p></label>
+							</div>
+						</div>
+						<div class="mui-col-xs-1">
+							<span class="mui-icon mui-icon-trash"></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+		<div class="picture_header">
+			新增地址
+			<a href="#picture" class="mui-icon mui-icon-close"></a>
+		</div>
+		<form class="picture_form">
+			<div class="mui-row picture_content">
+				<div class="mui-col-xs-3">收件人</div>
+				<div class="mui-col-xs-9"><input type="text" id="name" placeholder="普通输入框" class="mui-input-clear"></div>
+			</div>
+			<div class="mui-row picture_content">
+				<div class="mui-col-xs-3">联系电话</div>
+				<div class="mui-col-xs-9"><input type="text" id="phone" placeholder="普通输入框" class="mui-input-clear"></div>
+			</div>
+			<div class="mui-row picture_content">
+				<div class="mui-col-xs-3">所在地址</div>
+				<div class="mui-col-xs-9"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'>请选择省 市 区</button></div>
+			</div>
+			<div class="mui-row picture_content">
+				<div class="mui-col-xs-3">详细地址</div>
+				<div class="mui-col-xs-9"><input type="text" id="Detailed_address" placeholder="普通输入框" class="mui-input-clear"></div>
+			</div>
+		</form>
+		<div class="picture_button"><a href="#"><button type="button" class="mui-btn mui-btn-red" onclick="add_address()">保存地址</button></a></div>
+	</div>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.picker.js"></script>
+	<script src="js/mui.poppicker.js"></script>
+	<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init()
+			(function($) {
+				var deceleration = mui.os.ios ? 0.003 : 0.0009;
+				$('.scroll').scroll({
+					bounce: false,
+					indicators: false, //是否显示滚动条
+					deceleration: deceleration
+				});
+			})(mui);
+		mui.ready(function() {
+				var winHeight = window.innerHeight;
+				var height = winHeight - 40 + 'px';
+				var oContent = document.getElementById('mui-content');
+				oContent.style.height = height;
+			})
+			(function($, doc) {
+				var _getParam = function(obj, param) {
+					return obj[param] || '';
+				};
+				$.ready(function() {
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = document.getElementById('showCityPicker3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							showCityPickerButton.innerText = _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+			function add_address() {
+					var oPicture =	document.getElementById("picture").getElementsByTagName('form')[0];
+					var oVar_Name = document.getElementById("name");
+					var oVar_phone = document.getElementById("phone");
+					var oVar_address = document.getElementById("showCityPicker3");
+					var oVar_Detailed_address = document.getElementById("Detailed_address");
+					var p1 = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+					var oVar_phone_value = oVar_phone.value;
+					var me =false;
+					var me2 = false;
+					var html2 = '<div class="mui-col-xs-11"><div class="mui-radio mui-left">' +
+								'<input name="radio1" type="radio">' +
+								'<label><span>' + oVar_Name.value + '</span>' + oVar_phone.value + '<p>' +
+								oVar_address.innerHTML + oVar_Detailed_address.value + '</p></label></div></div>' +
+								'<div class="mui-col-xs-1"><span class="mui-icon mui-icon-trash" onclick="del_li()"></span></div>';
+					//console.log(html2);
+					var ul = document.querySelector('.mui-table-view');
+					var li;
+					li = document.createElement('li');
+					li.className = 'mui-table-view-cell mui-row';
+					li.innerHTML = html2;
+					//console.log(ul);
+					if(p1.test(oVar_phone_value)) me = true;
+					if(oVar_address.innerHTML == '请选择省 市 区') me2 =true
+					if(!me)
+					{
+						mui.toast("手机格式错误！");
+						oVar_phone.focus();
+						return false;
+					}else if(oVar_Name.value == ''||oVar_Detailed_address.value == ''||me2)
+					{
+						mui.toast("请填写完整");
+						return false;
+					}
+					ul.appendChild(li);
+					console.log(oPicture);
+					oPicture.reset();
+					oVar_address.innerHTML = '请选择省 市 区';
+					mui('#picture').popover('toggle');
+				}
+			
+			var btnArray = ['确认', '取消'];
+			mui('#mui-table-view').on('tap', '.mui-icon-trash', function(event) {
+				console.log("111");
+				var elem = this;
+				var li = elem.parentNode.parentNode;
+				mui.confirm('确认删除该条记录？', '消息提醒', btnArray, function(e) {
+					if (e.index == 0) {
+						li.parentNode.removeChild(li);
+					}
+				});
+			});
+			
+	</script>
+</body>
+</html>
