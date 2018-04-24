@@ -184,7 +184,7 @@
 						</li>
 						<li class="mui-table-view-cell mui-media mui-col-xs-3" id="showMore">
 							<a href="#">
-								<span class="mui-icon mui-icon-arrowdown"></span>
+								<span class="mui-icon mui-icon mui-icon-refresh"></span>
 								<div class="mui-media-body">更多</div>
 							</a>
 						</li>
@@ -272,7 +272,7 @@
 		</div>
 	</div>
 	<!-- 底部样式 -->
-	<nav class="mui-bar mui-bar-tab">
+	<nav class="mui-bar mui-bar-tab navTab">
 	    <a class="mui-tab-item mui-active" href="#">
 	        <span class="mui-icon mui-icon-home"></span>
 	        <span class="mui-tab-label">商城</span>
@@ -297,6 +297,23 @@
 			});
 			//产品列表更多选项点击跳转事件
 			$('.shop_ul').on('tap','a',function(){
+				var targetTab = this.getAttribute('href');
+				$.openWindow({
+						url: targetTab,
+						id: targetTab,
+						show: {
+							duration: 300
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							title: '正在加载...'
+						}
+					})
+			});
+			//底部菜单点击
+			$('.navTab').on('tap','a',function(){
 				var targetTab = this.getAttribute('href');
 				$.openWindow({
 						url: targetTab,

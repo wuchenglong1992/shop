@@ -221,13 +221,30 @@
 					indicators: false, //是否显示滚动条
 					deceleration: deceleration
 				});
+				//产品列表更多选项点击跳转事件
+				$('.footer_style').on('tap','.footer_style_jiesuan',function(){
+					$.openWindow({
+							url: 'Mobile-confirmOrder.html',
+							id: 'Mobile-confirmOrder.html',
+							show: {
+								duration: 300
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								title: '正在加载...'
+							}
+						})
+				});
+				$.ready(function() {
+					var winHeight = window.innerHeight;
+					var height = winHeight - 40 + 'px';
+					var oContent = document.getElementById('mui-content');
+					oContent.style.height = height;
+				})
 			})(mui);
-		mui.ready(function() {
-			var winHeight = window.innerHeight;
-			var height = winHeight - 40 + 'px';
-			var oContent = document.getElementById('mui-content');
-			oContent.style.height = height;
-		})
+		
 	</script>
 </body>
 </html>

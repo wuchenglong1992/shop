@@ -921,6 +921,31 @@ body {
             height: 420px;
             margin: 20px auto 0;
         }
+        .tm-clear .tb-gallery .tb-booth .ks-imagezoom-lens {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 210px;
+            height: 210px;
+            background:url("../image/T12pdtXaldXXXXXXXX-2-2.png");
+            z-index: 1;
+            cursor:move;
+        }
+        .tm-clear .tb-gallery .tb-booth .booth-img-detail {
+            display: none;
+            position: absolute;
+            right: -428px;
+            top: 0;
+            width: 418px;
+            height: 418px;
+            border:1px solid#ddd;
+            /*background-image:url("../image/27.jpg");*/
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position:0 0;
+            z-index: 3;
+        }
         .tm-clear .tb-gallery .tb-booth a {
             display: block;
             width: 418px;
@@ -940,16 +965,16 @@ body {
         .tm-clear .tb-gallery .tb-thumb-warp li {
             display: inline-block;
             margin-left: 16px;
-            padding-top: 22px;
-        }
-        .tm-clear .tb-gallery .tb-thumb-warp li a {
-            float: left;
+            margin-top: 22px;
             border: 2px solid transparent;
+        }
+        .tm-clear .tb-gallery .tb-thumb-warp li.active {
+            border:2px solid #000;
+        }
+        .tm-clear .tb-gallery .tb-thumb-warp li a{
+            float: left;
             width: 56px;
             height: 56px;
-        }
-        .tm-clear .tb-gallery .tb-thumb-warp li a.active {
-            border:2px solid #000;
         }
         .tm-clear .tb-gallery .tb-thumb-warp li a img {
             max-width: 56px;

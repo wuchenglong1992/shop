@@ -88,8 +88,8 @@
 </head>
 <body>
 	<!-- 底部样式 -->
-	<nav class="mui-bar mui-bar-tab">
-	    <a class="mui-tab-item mui-active" href="Mobile-index.html">
+	<nav class="mui-bar mui-bar-tab navTab">
+	    <a class="mui-tab-item" href="Mobile-index.html">
 	        <span class="mui-icon mui-icon-home"></span>
 	        <span class="mui-tab-label">商城</span>
 	    </a>
@@ -97,7 +97,7 @@
 	        <span class="mui-icon mui-icon-phone"></span>
 	        <span class="mui-tab-label">订单</span>
 	    </a>
-	    <a class="mui-tab-item" href="#">
+	    <a class="mui-tab-item mui-active" href="#">
 	        <span class="mui-icon mui-icon-gear"></span>
 	        <span class="mui-tab-label">个人中心</span>
 	    </a>
@@ -209,6 +209,23 @@
 				bounce: false,
 				indicators: true, //是否显示滚动条
 				deceleration: deceleration
+			});
+			//底部菜单点击
+			$('.navTab').on('tap','a',function(){
+				var targetTab = this.getAttribute('href');
+				$.openWindow({
+						url: targetTab,
+						id: targetTab,
+						show: {
+							duration: 300
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							title: '正在加载...'
+						}
+					})
 			});
 		})(mui)
 	</script>

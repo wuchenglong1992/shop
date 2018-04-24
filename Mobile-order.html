@@ -126,7 +126,7 @@
 </head>
 <body>
 	<!-- 底部样式 -->
-	<nav class="mui-bar mui-bar-tab">
+	<nav class="mui-bar mui-bar-tab navTab">
 	    <a class="mui-tab-item" href="Mobile-index.html">
 	        <span class="mui-icon mui-icon-home"></span>
 	        <span class="mui-tab-label">商城</span>
@@ -399,6 +399,23 @@
 				indicators: true, //是否显示滚动条
 				deceleration: deceleration
 			});
+			//底部菜单点击
+			$('.navTab').on('tap','a',function(){
+				var targetTab = this.getAttribute('href');
+				$.openWindow({
+						url: targetTab,
+						id: targetTab,
+						show: {
+							duration: 300
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							title: '正在加载...'
+						}
+					})
+			});
 			$.ready(function() {
 				//循环初始化所有下拉刷新，上拉加载。
 				$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
@@ -429,8 +446,8 @@
 			daizhifu.each(function(i, btn) {
 				btn.addEventListener('tap', function() {
 					$.openWindow({
-						url: 'shangjiadingdanxiangxi.html',
-						id: 'shangjiadingdanxiangxi.html',
+						url: 'Mobile-det-order.html',
+						id: 'Mobile-det-order.html',
 						preload: true,
 						show: {
 

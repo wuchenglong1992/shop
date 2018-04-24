@@ -3,6 +3,7 @@ window.onload = function () {
 	preferential();
 	tabClick();
 	bdTab();
+	mouseenter();
 }
 // 优惠点击
 function preferential(){
@@ -48,5 +49,60 @@ function bdTab(){
 			addClass(this,'tm-selected');
 			oDiv[index].style.display = 'block';
 		}
+	})
+}
+// 鼠标移入查看大图
+function mouseenter() {
+	var oTb = document.getElementsByClassName("tb-thumb-warp")[0],
+		oUl = oTb.getElementsByTagName("ul")[0],
+		oLi = oUl.getElementsByTagName("li"),
+		oImg = document.getElementById("J_ImgBooth"),
+		oBooth = document.getElementsByClassName("tb-booth")[0];
+		oDiv = document.getElementsByClassName("booth-img-detail")[0],
+		oSpan = document.getElementsByClassName("ks-imagezoom-lens")[0];
+	oUl.addEventListener('mouseenter',function(e){
+		var target = e.target;
+		if(target.tagName == "LI"){
+			[].forEach.call(oLi,function(btn,index){
+				if(hasClass(btn,"active")){
+					removeClass(btn,"active");
+				}
+			})
+			addClass(target,"active");
+			oImg.src = target.childNodes[0].childNodes[0].src;
+		}
+	},true)
+	
+	oBooth.addEventListener('mouseenter',function(e){
+		oSpan.style.display = 'block';
+		oDiv.style.display = 'block';
+		oDiv.style.backgroundImage = "url("+ oImg.src +")";
+	},true)
+	oBooth.addEventListener('mouseout',function(e){
+		oSpan.style.display = 'none';
+		oDiv.style.display = 'none';
+	},false)
+	oBooth.addEventListener('mousemove',function(e){
+		var x = e.clientX;
+		var y = e.clientY;
+		var t = oBooth.getBoundingClientRect().top;
+		var l = oBooth.getBoundingClientRect().left;
+		var _left = x - l - oSpan.offsetWidth / 2;
+		var _top = y - t - oSpan.offsetHeight / 2;
+		if(_top <= 0){
+			_top = 0;
+		}else if(_top >= oImg.offsetHeight - oSpan.offsetHeight){
+			_top = oImg.offsetHeight - oSpan.offsetHeight;
+		}
+		if(_left <= 0){
+			_left = 0;
+		}else if(_left>= oImg.offsetWidth - oSpan.offsetWidth){
+			_left = oImg.offsetWidth - oSpan.offsetWidth;
+		}
+		oSpan.style.top = _top + 'px';
+		oSpan.style.left = _left + 'px';
+		var positionX = _left / (oImg.offsetWidth - oSpan.offsetWidth);
+		var positionY = _top / (oImg.offsetHeight - oSpan.offsetHeight);
+		oDiv.style.backgroundPosition = positionX*100 + '% ' + positionY*100 + '%';
 	})
 }
