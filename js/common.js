@@ -1,18 +1,20 @@
 /*
 	常见功能封装
 */
-
+// 添加classname
 function addClass(obj,cls){
 	if (!this.hasClass(obj, cls)) {
         obj.className += " " + cls;
     }
 }
+// 移除classname
 function removeClass(obj,cls){
 	if (hasClass(obj, cls)) {
         var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
         obj.className = obj.className.replace(reg, ' ');
     }
 }
+// 判断是否有某个className
 function hasClass(obj,cls){
 	var objCls = obj.className,
 		objclslst = objCls.split(" ");
@@ -22,6 +24,15 @@ function hasClass(obj,cls){
 		}
 	}
 	return false;
+}
+
+// 批量移除classname
+function eachRemoveClassName(arr,name){
+	[].forEach.call(arr,function(btn){
+		if(hasClass(btn,name)){
+			removeClass(btn,name)
+		}
+	})
 }
 
 /*购物车点击事件*/

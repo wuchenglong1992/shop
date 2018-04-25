@@ -4,6 +4,8 @@ window.onload = function () {
 	tabClick();
 	bdTab();
 	mouseenter();
+	commentsImg();
+	switchableBtn();
 }
 // 优惠点击
 function preferential(){
@@ -22,11 +24,7 @@ function tabClick(){
 	var oUl = document.getElementsByClassName("tb-prop-ul");
     [].forEach.call(oUl,function(btn,index){
 		btn.addEventListener("click",function(e){
-			for( item of e.path[2].children){
-				if(hasClass(item,'selected')){
-					removeClass(item,'selected');
-				}
-			}
+			eachRemoveClassName(e.path[2].children,"selected");
 			addClass(e.path[1],'selected');
 		},true)
 	})
@@ -38,11 +36,7 @@ function bdTab(){
 	var oDiv = document.getElementsByClassName("mainwrapCon");
 	[].forEach.call(oLi,function(btn,index){
 		btn.onclick = function(){
-			for( item of oLi){
-				if(hasClass(item,'tm-selected')){
-					removeClass(item,'tm-selected');
-				}
-			}
+			eachRemoveClassName(oLi,"tm-selected");
 			for( item of oDiv){
 				item.style.display = "none";
 			}
@@ -63,11 +57,7 @@ function mouseenter() {
 	oUl.addEventListener('mouseenter',function(e){
 		var target = e.target;
 		if(target.tagName == "LI"){
-			[].forEach.call(oLi,function(btn,index){
-				if(hasClass(btn,"active")){
-					removeClass(btn,"active");
-				}
-			})
+			eachRemoveClassName(oLi,"active");
 			addClass(target,"active");
 			oImg.src = target.childNodes[0].childNodes[0].src;
 		}
@@ -105,4 +95,63 @@ function mouseenter() {
 		var positionY = _top / (oImg.offsetHeight - oSpan.offsetHeight);
 		oDiv.style.backgroundPosition = positionX*100 + '% ' + positionY*100 + '%';
 	})
+}
+
+//评论区域点击查看大图
+function commentsImg(){
+	var oUl = document.getElementsByClassName("tm-m-photos-thumb");
+	var oImg = document.getElementsByClassName("tm-m-photo-viewer-img");
+	[].forEach.call(oUl,function(btn,index){
+		var oLi = btn.getElementsByTagName("li");
+		btn.addEventListener('click',function(e){
+			if(e.target.tagName==="IMG"){
+				if(hasClass(e.path[1],"tm-current")){
+					removeClass(e.path[1],"tm-current")
+					oImg[index].parentNode.style.display = 'none'
+				}else{
+					eachRemoveClassName(oLi,"tm-current");
+					addClass(e.path[1],"tm-current");
+					oImg[index].parentNode.style.display = 'block'
+					oImg[index].src = e.target.src;
+				}
+			}
+		},true)
+	})
+}
+
+
+// 右侧广告位滚动
+function switchableBtn(){
+	var aPrev = document.getElementsByClassName("ald-switchable-prev-btn")[0],
+		aNext = document.getElementsByClassName("ald-switchable-next-btn")[0];
+
+	aPrev.onclick = function(){
+		toRun(-5);
+	}
+	aNext.onclick = function(){
+		toRun(5);
+	}
+}
+function toRun(speed){
+	var oUl = document.getElementsByClassName("ald-switchable-content")[0],
+		oLi = oUl.getElementsByTagName("li"),
+		distance = oLi[0].offsetHeight*3,
+		timer = null;
+	// function move(){
+	//	num += speed;
+		
+		// if(num >= distance || num <  -distance){
+		// 	clearInterval(timer);
+		// }else{
+		// 	timer = setInterval(move,10);
+		// }
+		// if(Math.abs(oUl.offsetTop) == oUl.offsetHeight/2)
+		// {
+		// 	oUl.style.top = 0;
+		// }
+	//}
+		// clearInterval(timer);
+		timer = setInterval(function(){
+			oUl.style.top = oUl.offsetTop + speed + 'px';
+		},10)
 }
