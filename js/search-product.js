@@ -3,7 +3,8 @@ window.onload = function () {
 	moreOptions(); 
 	showList(); // 商品展示类型
 	storeList(); // 店铺商品展开
-	proThumb(); //商品信息轮播条
+	proThumb(); //商品信息轮播条图片点击
+	productThumb();//商品信息轮播条
 }
 
 function moreOptions(){
@@ -96,4 +97,64 @@ function proThumb(){
 			e.path[5].children[0].children[0].children[0].src = e.path[0].src;
 		},true)
 	})
+}
+// 滚动
+function productThumb(){
+	var aPro = document.getElementsByClassName("productThumb");
+	[].forEach.call(aPro,function(btn){
+		var to_left = btn.getElementsByClassName("proThumb-prev")[0],
+			to_right = btn.getElementsByClassName("proThumb-next")[0],
+			aUl = btn.getElementsByClassName("ks-switchable-content")[0],
+			aLi = aUl.getElementsByTagName("li");
+		if(aLi.length<=5){
+			to_left.style.display = 'none';
+			to_right.style.display = 'none';
+		}else{
+			to_left.onclick = function(){
+				proMove(0,3,btn)
+			}
+			to_right.onclick = function(){
+				proMove(1,3,btn)
+			}
+		}
+		
+	})
+}
+// direction 0为左, 1为右
+// num 点击切换的数量
+// 父级元素
+function proMove(direction,num,parent) {
+	var aContent = parent.getElementsByClassName("proThumb-wrap")[0],
+		aUl = aContent.getElementsByClassName("ks-switchable-content")[0],
+		aLi = aUl.getElementsByTagName("li"),
+		distance = (aLi) && (aLi[0].offsetWidth+3),
+		viewNumber = ~~(aContent.offsetWidth / aLi[0].offsetWidth),
+		speed = 5;
+	aContent.tabNumber = aContent.tabNumber || 0;
+	if(direction){
+		aContent.tabNumber -= num;
+		aContent.tabNumber = Math.max(aContent.tabNumber,-aLi.length+viewNumber);
+	}else{
+		aContent.tabNumber += num;
+		aContent.tabNumber = Math.min(aContent.tabNumber,0);
+	}
+	aUl.style.left = aUl.style.left || '0px';
+	clearTimeout( aContent.timer);
+	(function move(){
+		if(direction){
+			if(parseInt(aUl.style.left) >= aContent.tabNumber *distance ){
+				aUl.style.left = aUl.offsetLeft - speed +'px';
+				aContent.timer = setTimeout(move);
+			}else{
+				return
+			}
+		}else{
+			if(parseInt(aUl.style.left) <= aContent.tabNumber *distance ){
+				aUl.style.left = aUl.offsetLeft + speed +'px';
+				aContent.timer = setTimeout(move);
+			}else{
+				return
+			}
+		}
+	})()
 }
